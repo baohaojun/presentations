@@ -1,0 +1,14 @@
+*.vrb
+*.log
+*.nav
+*.snm
+*.toc
+*.dvi
+*.pdf
+*.pyg
+*.xbb
+*.tex
+*.org.[0-9]*
+*.aux
+*.out
+_minted-system-config/

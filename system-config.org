@@ -106,7 +106,7 @@
 *** ew uu
 *** git-interactive-add
 *** 没有版本管理工具，就没有system-config
-*** 开始任何项目，先创建system-config
+*** 开始任何项目，先创建 git 库!!!
 
 ** Linux
 

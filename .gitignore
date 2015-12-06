@@ -12,3 +12,4 @@
 *.aux
 *.out
 _minted-system-config/
+_minted-*

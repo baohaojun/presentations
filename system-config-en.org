@@ -1,0 +1,151 @@
+#+Latex: \begin{CJK*}{UTF8}{simsun}
+#+Latex: \CJKtilde
+
+
+#+TITLE:     System-config：the ugly and the sweet
+#+AUTHOR:    Bao Haojun
+#+EMAIL:     baohaojun@gmail.com
+#+DATE:      2015-11-20
+#+LATEX_CLASS_OPTIONS: [presentation,CJKbookmarks]
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:2 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+
+#+BEAMER_THEME: Berkeley
+#+BEAMER_COLOR_THEME: lily
+
+* A kind of UX：interactive completion
+** In Firefox
+
+[[./images/firefox.ps]]
+
+** In Emacs
+
+[[./images/emacs.ps]]
+
+** In File Manager？
+
+[[./images/file-manager.ps]]
+
+** On the Command Line
+
+[[./images/ui-cli.ps]]
+
+** On the Command Line(2)
+
+*** s (search engine)
+*** git co -B
+*** git cherry-pick
+
+
+** In T1Wrench
+[[./images/wrench-ui.ps]]
+
+** Everywhere
+
+*** Sawfish Desktop Window Manager
+*** Emacs Commands —— helm
+*** Variations on Command Line
+*** In my input method
+*** In Smartisan phone, Mail contact search
+
+* The most important 7 weapons
+** Editor (Emacs)
+*** Programs, documents, they are all texts
+*** All kinds of completion
+- C/C++ (Qt/Visual C++): auto-complete-clang-async.el
+- Java: ajoke.el
+- bbyac: type a Bit and Bang You Are Completed
+- yasnippet
+- codegen
+- getopts/getopt
+*** Using Emacs to read code
+
+** Emacs (code reading)
+*** beagrep: combines search engine and grep
+*** grep-beatags: combines search engine and ctags-exuberant and grep
+*** grep-func-call: search for usages
+*** local variable definition lookup
+*** local variable usage lookup
+** Emacs (document reading)
+*** man pages
+*** info pages
+*** html —— delegated to firefox
+** CLI (xfce4-terminal + bash)
+*** history for bash
+- bash's native history: up/down, Ctrl-r/Ctrl-s
+- re
+- cd history
+*** using tools together
+- of: open file
+- putclip
+- cut the current command
+- up: copy the unix path
+** Browser (Firefox)
+*** Emacs key bindings for firefox with Firemacs and Sawfish (reading blogs)
+*** Write monkeygrease JavaScript
+*** As my document reader
+*** As my dictionary tool
+** Window manager (sawfish)
+*** Help integrate all other tools
+- Help Emacs code reading
+- Help QtCreator to edit with Emacs
+*** Define your own hotkeys
+*** Have different editing modes like Vim
+*** Emacs key bindings for all windows
+
+** Version Control (git)
+*** Coupling Git with my scripts (refactory-rename)
+*** git-interactive-add
+*** system-config is managed by git, too
+*** Use git before you write first line of code, in any project
+
+** Operating System (Linux)
+
+*** Why are these tools important？
+- Allow user to soak in, flow
+
+- I don't hate the mouse, switching hurts
+  * Why do I do the dictionary lookup with mouse
+
+** Human Being (Yourself)
+*** Only a human being can wield the other weapons
+* Summary
+** s: Why is the name so short
+***  Huffman code theory
+*** Easy things easier
+*** Hard things easy
+*** Impossible things possible
+*** Reduce required steps
+*** Decompose into smaller tasks
+*** Top down and bottom up
+** Program by wishful thinking
+*** Todo lists: jwz's programming method
+- Introduction to org-mode
+- GTD: get things done
+*** Linus's programming method
+*** sicp & htdp
+** 7 habits of effective text editing
+*** Don't learn everything at once, learn by doing
+*** Fork my system-config project
+- https://github.com/baohaojun/system-config
+*** Maybe start learning Emacs?
+
+** Thanks
+
+*** 王垠 (Wang Yin)
+*** Smartisan, Luo Yonghao, Qian Cheng, Bai Yu, and colleagues
+
+#+Latex: \end{CJK*}
+
+# Local Variables: #
+# eval: (org-beamer-mode) #
+# eval: (mmm-mode 1) #
+# End: #

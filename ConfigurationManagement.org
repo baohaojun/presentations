@@ -1,0 +1,44 @@
+#+Latex: \begin{CJK*}{UTF8}{simsun}
+#+Latex: \CJKtilde
+
+
+#+TITLE:     CM工作简介
+#+AUTHOR:    包昊军
+#+EMAIL:     baohaojun@gmail.com
+#+DATE:      2016-01-13
+#+LATEX_CLASS_OPTIONS: [presentation,CJKbookmarks]
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:2 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+
+#+BEAMER_THEME: Berkeley
+#+BEAMER_COLOR_THEME: lily
+
+* CM任务简介
+** CM任务一：出版本
+*** daily build
+*** test build
+*** release build
+
+** CM任务二：代码服务器管理
+
+** CM任务三：工程师支持
+
+** CM任务四：写文档
+
+* CM具体分工
+
+** CM架构设计
+
+*** 以system-config为基础
+*** 使用文学编程，文档、代码、项目管理一股脑儿搞定
+*** 许愿、配方、抽象、改进
+
+** CM日常运维

@@ -41,7 +41,7 @@
 ** 在命令行上(2)
 
 *** s (search engine)
-*** git co -B
+*** git checkout -B
 *** git cherry-pick
 
 

@@ -58,7 +58,7 @@
 ** CM架构设计
 
 *** [[http://www.bilibili.com/video/av3376647/][以system-config为基础]]
-*** [[http://172.16.0.251/baohaojun/blog/2015/05/14/0-smartcm-introduction.html][使用文学编程，文档、代码、项目管理一股脑儿搞定]]
+*** [[http://172.16.21.238/baohaojun/blog/2015/05/14/0-smartcm-introduction.html][使用文学编程，文档、代码、项目管理一股脑儿搞定]]
 *** 许愿、配方、抽象、改进
 
 ** CM日常运维

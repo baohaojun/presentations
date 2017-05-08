@@ -2,7 +2,7 @@
 #+Latex: \CJKtilde
 
 
-#+TITLE:     Wrench：一个很好玩的玩具和很好用的工具
+#+TITLE:     Wrench：一个玩具和一个工具
 #+AUTHOR:    包昊军
 #+EMAIL:     baohaojun@gmail.com
 #+DATE:      2017-05-08

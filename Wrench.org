@@ -1,0 +1,83 @@
+#+Latex: \begin{CJK*}{UTF8}{simsun}
+#+Latex: \CJKtilde
+
+
+#+TITLE:     Wrench：一个很好玩的玩具和很好用的工具
+#+AUTHOR:    包昊军
+#+EMAIL:     baohaojun@gmail.com
+#+DATE:      2017-05-08
+#+LATEX_CLASS_OPTIONS: [presentation,CJKbookmarks]
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:2 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+
+#+BEAMER_THEME: Berkeley
+#+BEAMER_COLOR_THEME: lily
+
+* 屏幕同步
+** 演示
+
+[[./images/firefox.ps]]
+
+** 学习
+
+[[./images/emacs.ps]]
+
+*** 手机上看书太累了！
+*** 手机上看书太容易分心了！
+
+* 自动操作手机
+** 聊天
+*** 发送文字
+*** 发送表情符
+*** 发送图片
+    - 选图片文件
+    - 从浏览器直接拖图
+** 搜索
+*** 找微信联系人
+*** 找QQ联系人
+*** 找QQ群里的联系人
+*** 找微博上的用户
+*** 按发件人找邮件
+*** 在Kindle里搜书
+
+** 扫码
+*** 微信扫码
+*** 微博扫码
+*** 京东扫码
+
+** 抢红包
+*** 抢微信红包
+*** 抢QQ红包
+
+* 高级用法
+** 自己录脚本
+
+** 注意事项
+*** 目前不能开“Big Bang”功能
+*** 高清屏幕同步功能目前只有最新的锤子手机上可用
+*** 下载地址
+
+    [[https://github.com/SmartisanTech/Wrench-releases/releases]]
+** Wrench 是开源项目
+
+   https://github.com/SmartisanTech/Wrench
+
+*** 致谢
+    - 锤子科技
+    - 罗永浩
+    - 邹  伟
+
+#+Latex: \end{CJK*}
+
+# Local Variables: #
+# eval: (org-beamer-mode) #
+# eval: (mmm-mode 1) #
+# End: #

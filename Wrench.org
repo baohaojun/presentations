@@ -2,7 +2,7 @@
 #+Latex: \CJKtilde
 
 
-#+TITLE:     Wrench：一个玩具和一个工具
+#+TITLE:     Wrench：一个连接PC和电脑的工具（玩具）
 #+AUTHOR:    包昊军
 #+EMAIL:     baohaojun@gmail.com
 #+DATE:      2017-05-08
@@ -24,11 +24,11 @@
 * 屏幕同步
 ** 演示
 
-[[./images/firefox.ps]]
+[[./images/wrench-demo.ps]]
 
 ** 学习
 
-[[./images/emacs.ps]]
+[[./images/wrench-read.ps]]
 
 *** 手机上看书太累了！
 *** 手机上看书太容易分心了！
@@ -60,10 +60,10 @@
 
 * 高级用法
 ** 自己录脚本
+*** 用鼠标右键点击屏幕同步窗口
 
 ** 注意事项
-*** 目前不能开“Big Bang”功能
-*** 高清屏幕同步功能目前只有最新的锤子手机上可用
+*** 高清屏幕同步功能目前只支持坚果Pro
 *** 下载地址
 
     [[https://github.com/SmartisanTech/Wrench-releases/releases]]
@@ -71,10 +71,19 @@
 
    https://github.com/SmartisanTech/Wrench
 
+*** 使用Qt编程，支持所有主流PC平台
+
+    - Linux
+    - Mac
+    - Windows
+
 *** 致谢
     - 锤子科技
-    - 罗永浩
-    - 邹  伟
+
+*** 贡献
+    - 源代码Patch
+    - Ideas？
+    - 用小扳手打钱？[捂脸]
 
 #+Latex: \end{CJK*}
 

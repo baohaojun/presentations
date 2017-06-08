@@ -23,73 +23,76 @@
 
 * 什么是小扳手？
 
-** 一个在 PC 上连接、操作安卓手机的开源软件
+** 在🖥上连接、操作安卓📱
 
 *** 让手机聊天、社交软件变得更方便
-*** 让手机小屏幕变大，两块屏幕变统一
-*** 在 PC 上显示、处理手机上的通知消息
-*** 方便的扩展功能
-*** 自动抢红包
+*** 让📱小屏幕变大，屏幕同步到🖥上
+*** 在🖥上显示、处理📱上的通知消息
+*** 方便的 Lua 脚本扩展功能
+*** 自动抢红包［斜眼笑］［卖萌］
 
 * 屏幕同步
-** 演示
+** 屏幕同步一：演示模式
 
 [[./images/wrench-demo.ps]]
 
-** 阅读
+** 屏幕同步二：高清阅读模式
 
 [[./images/wrench-read.ps]]
 
 ** Why［疑问］
 
-*** 手机上看书太累了！
-*** 手机上看书太容易分心了！
+*** 手机上看书太😫了！
+*** 手机上看书太容易💔了！
     - 一不小心就把微博打开
     - 一不小心就把微信朋友圈打开
 *** 不是有网页版 Kindle Reader 吗？
-    - 跟手持 Kindle 设备间的同步非常折磨神经
-*** 跟 system-config 结合，手机上的金山词霸？
+    - 跟手持 Kindle 设备间的同步非常折磨神经［吐］
+*** 跟 [[https://github.com/baohaojun/system-config][system-config]] 结合，手机上的金山词霸？
 
 * 自动操作手机
 ** 聊天
 *** 发送文字🙄
 *** 发送表情符［doge］
-*** 发送图片
+*** 发送图片🖼
     - 选图片文件
     - 从浏览器直接拖图
 ** 搜索
-*** 找微信联系人
-*** 找 QQ 联系人
-*** 找 QQ 群里的联系人
-*** 找微博上的用户
-*** 按发件人找邮件
-*** 在 Kindle 里搜书
+*** 找微信［微信］联系人
+*** 找 QQ［QQ］ 联系人
+*** 找 QQ［QQ］ 群里的联系人
+*** 找微博［微博］上的用户
+*** 按发件人找邮件［邮件］
+*** 在 Kindle［亚马逊 Kindle］ 里搜书
 
 ** 扫码
-*** 微信扫码
-*** 微博扫码
-*** 京东扫码
+*** 微信［微信］扫码
+*** 微博［微博］扫码
+*** 京东［手机京东］扫码
 
 ** 抢红包
-*** 抢微信红包
-*** 抢 QQ 红包
+*** 抢微信［微信］红包
+*** 抢 QQ［QQ］ 红包
 
 * 高级用法
-** 自己录脚本
+** 自己录 Lua 脚本
 *** 用鼠标右键点击屏幕同步窗口
 
 [[./images/wrench-screen-record.ps]]
 
 ** 注意事项
-*** 高清屏幕同步功能目前只支持坚果 Pro
+*** 屏幕同步高清阅读模式目前只支持坚果 Pro
+*** 确保安卓 adb 连接
+*** 通知消息同步可能要打开关闭多试几次
 *** 下载地址
 
-    [[https://github.com/SmartisanTech/Wrench-releases/releases]]
-* 更多信息
+    [[https://github.com/SmartisanTech/Wrench-releases/releases][Github SmartisanTech Wrench-Releases
+]]
+* 开源信息
 ** Wrench 是开源项目
 
 *** 项目 github 网址
-   https://github.com/SmartisanTech/Wrench
+   [[https://github.com/SmartisanTech/Wrench]]
 
 *** 使用 Qt、Lua 编程，支持所有主流 PC 平台
 
@@ -99,17 +102,18 @@
 
 *** 支持几乎所有安卓手机
     - 支持锤子科技所有机型
-    - 最低安卓版本请参考 Smartisan T1
+    - 其他厂商手机最低安卓版本要求请参考 Smartisan T1
 
-** 致谢和 Howto Contribute
-*** 致献
-    - 锤子科技
+** 致谢、Howto Contribute
+*** 致谢
+    - [[http://www.smartisan.com/cn/][锤子科技]]
 *** Help Wrench Project
-    - 告诉、帮助更多朋友使用小扳手
-    - 源代码 Patch
-    - 购买、使用锤子科技手机（当前小扳手版本在用坚果 Pro 开发）
+    - 源代码 Patch、［瓢虫］修正
     - Ideas are welcome❣
+    - 购买、使用锤子科技手机（当前版本用坚果 Pro 开发）
+    - 求转发［求关注］、帮助更多朋友使用小扳手
     - 用小扳手给作者打钱［疑问］［捂脸］
+    - 微信公众号： Programate
 
 #+Latex: \end{CJK*}
 

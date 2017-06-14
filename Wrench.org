@@ -25,15 +25,15 @@
 
 ** 在🖥上连接、操作安卓📱
 *** 🔧能干什么？
-- 让💻版的QQ一样使用所有📱聊天软件、社交软件
+- 像💻版的［QQ］一样使用超级丰富的📱聊天软件、社交软件
 - 让📱小屏幕变大，屏幕同步到🖥上
-- 在🖥上显示、处理📱上的通知消息
-- 方便的 Lua 脚本扩展功能
+- 在🖥上显示、处理📱上收到的🔔消息
+- 方便的 Lua 自动化脚本扩展功能
 - 自动抢红包［斜眼笑］［卖萌］
 
 *** 谁会用🔧［疑问］
 - 经常使用💻、用着💻又想着📱，用着📱又想着💻
-- 🤓
+- 喜欢自动化快捷操作（［一步］［疑问］）的🤓
 * 屏幕同步
 ** 屏幕同步一：演示模式
 
@@ -95,7 +95,7 @@
 
     [[https://github.com/SmartisanTech/Wrench-releases/releases][Github SmartisanTech Wrench-Releases]]
 * 开源信息
-** Wrench 是开源项目
+** 🔧是开源项目
 
 *** 项目 github 网址
    [[https://github.com/SmartisanTech/Wrench]]
@@ -113,7 +113,7 @@
 ** 致谢、Howto Contribute
 *** 致谢
     - ［锤子科技 smartisan］ [[http://www.smartisan.com/cn/][锤子科技]]
-*** Help Wrench Project
+*** Help 🔧 Project
     - 源代码 Patch、［瓢虫］修正
     - Ideas are welcome❣
     - 购买、使用锤子科技手机（当前版本用坚果 Pro 开发）

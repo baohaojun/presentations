@@ -110,7 +110,7 @@
     - 支持［锤子科技 smartisan］所有机型
     - 其他厂商手机最低安卓版本要求请参考 Smartisan T1
 
-** 致谢、Howto Contribute
+** 致谢、How to Help
 *** 致谢
     - ［锤子科技 smartisan］ [[http://www.smartisan.com/cn/][锤子科技]]
 *** Help 🔧 Project

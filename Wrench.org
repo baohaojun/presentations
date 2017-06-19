@@ -88,13 +88,6 @@
 
 [[./images/wrench-screen-record.ps]]
 
-** 注意事项
-*** 屏幕同步高清阅读模式目前只支持坚果 Pro
-*** 确保安卓 adb 连接
-*** 通知消息同步可能要打开关闭多试几次
-*** 下载地址
-
-    [[https://github.com/SmartisanTech/Wrench-releases/releases][Github SmartisanTech Wrench-Releases]]
 * 开源信息
 ** 🔧是开源项目
 
@@ -111,6 +104,21 @@
     - 支持［锤子科技 smartisan］所有机型
     - 其他厂商手机最低安卓版本要求请参考 Smartisan T1
 
+** 下载、文档
+
+*** 下载地址
+
+    [[https://github.com/SmartisanTech/Wrench-releases/releases][Github SmartisanTech Wrench-Releases]]
+
+*** 使用手册
+
+    [[http://baohaojun.github.io/blog/2014/12/01/0-T1Wrench-2.0-Usage-Guide.html][博客文章《小扳手使用手册》]]
+
+*** 开发手册
+
+    Github Project Readme
+
+
 ** 致谢、How to Help
 *** 致谢
     - ［锤子科技 smartisan］ [[http://www.smartisan.com/cn/][锤子科技]]
@@ -119,7 +127,7 @@
     - Ideas are welcome❣
     - 购买、使用锤子科技手机（当前版本用坚果 Pro 开发）
     - 求转发［求关注］、帮助更多朋友使用小扳手
-    - 用小扳手给作者打钱［疑问］［捂脸］
+    - 用小扳手给作者打钱［疑问］［捂脸］［机智］
     - 微信公众号： Programate
 
 #+Latex: \end{CJK*}

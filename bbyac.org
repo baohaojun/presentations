@@ -2,7 +2,7 @@
 #+Latex: \CJKtilde
 
 
-#+TITLE:     BBYAC: The Bit Bang (Yet Another) Completion
+#+TITLE:     BBYAC: The Bit Bang (Yet Another) Completion for Emacs
 #+AUTHOR:    Bao Haojun
 #+EMAIL:     baohaojun@gmail.com
 #+DATE:      2017-08-12
@@ -37,6 +37,8 @@
 
 *** You type a little BIT
 *** Bang! Bbyac expand it into a regexp (=B.*?I.*?T=)
+    - (bbyac--line-bbyac-extracter)
+    - (bbyac--symbol-bbyac-extracter)
 *** Bbyac find matches with the regexp
 *** Bbyac ask you to select from the matches
 *** Bbyac complete with the selected match
@@ -63,3 +65,4 @@
 
 *** http://github.com/baohaojun/bbyac
 *** Installable from melpa
+

@@ -1,0 +1,65 @@
+#+Latex: \begin{CJK*}{UTF8}{simsun}
+#+Latex: \CJKtilde
+
+
+#+TITLE:     BBYAC: The Bit Bang (Yet Another) Completion
+#+AUTHOR:    Bao Haojun
+#+EMAIL:     baohaojun@gmail.com
+#+DATE:      2017-08-12
+#+LATEX_CLASS_OPTIONS: [presentation,CJKbookmarks]
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:2 num:t toc:t \n:nil @:t ::t |:t ^:t -:t f:t *:t <:t
+#+OPTIONS:   TeX:t LaTeX:t skip:nil d:nil todo:t pri:nil tags:not-in-toc
+#+INFOJS_OPT: view:nil toc:nil ltoc:t mouse:underline buttons:0 path:http://orgmode.org/org-info.js
+#+EXPORT_SELECT_TAGS: export
+#+EXPORT_EXCLUDE_TAGS: noexport
+#+LINK_UP:
+#+LINK_HOME:
+
+#+BEAMER_THEME: Berkeley
+#+BEAMER_COLOR_THEME: lily
+
+* Bbyac's Completion Methods
+
+** Bbyac's Completion Methods
+
+*** Complete a symbol
+*** Complete a partial line
+*** Complete a whole line
+*** Complete more than 1 line
+*** Complete program constructs (by major mode)
+
+* Some details about bbyac
+
+** How does it work?
+
+*** You type a little BIT
+*** Bang! Bbyac expand it into a regexp (=B.*?I.*?T=)
+*** Bbyac find matches with the regexp
+*** Bbyac ask you to select from the matches
+*** Bbyac complete with the selected match
+
+** Some more details about bbyac
+
+*** Sort matches from the current buffer
+*** Complete from other buffers
+    - current buffer
+    - all visible buffers
+    - non visible buffers (first match stops)
+*** How does ``complete by major mode'' work?
+
+** Comparison to other completion methods
+
+*** Hippie expand (simplest, but not powerful enough)
+*** Company (it's a framework!)
+*** Yasnippet (powerful, but need preparation before hand)
+*** Bbyac (simple & stupid, get the job done)
+*** I use them all😄
+
+* Bbyac project info
+** Bbyac project info
+
+*** http://github.com/baohaojun/bbyac
+*** Installable from melpa

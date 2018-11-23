@@ -2,7 +2,7 @@
 #+Latex: \CJKtilde
 
 
-#+TITLE:     System-config：我很丑，但是我很温柔
+#+TITLE:     System-config: Wishful Thinking
 #+AUTHOR:    包昊军
 #+EMAIL:     baohaojun@gmail.com
 #+DATE:      2015-11-20
@@ -20,6 +20,8 @@
 
 #+BEAMER_THEME: Berkeley
 #+BEAMER_COLOR_THEME: lily
+
+* Wishful Thinking
 
 * 一种有意思的UX：交互式补齐
 ** 在Firefox中

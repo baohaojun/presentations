@@ -11,14 +11,49 @@
 #+LANGUAGE:  en
 #+OPTIONS:   H:2
 
-#+BEAMER_THEME: Berkeley
-#+BEAMER_COLOR_THEME: lily
+#+BEAMER_THEME: Boadilla
+#+BEAMER_COLOR_THEME: crane
 
 * Wishful Thinking
 
 ** SICP 介绍（Structure and Interpretation of Computer Programs）
+
+*** 怎么定义有理数及其各种运算？
+*** 很简单，假设我们有 3 个函数：=ｍａｋｅ－有理数=，=取分母=，=取分子=
+*** 举例：有理数乘法
+
+#+BEGIN_SRC emacs-lisp
+  (ｄｅｆｕｎ 有理数乘法 (有理数ａ 有理数ｂ)
+    (ｍａｋｅ－有理数
+     (* (取分子 有理数ａ) (取分子 有理数ｂ))
+     (* (取分母 有理数ａ) (取分母 有理数ｂ))))
+#+END_SRC
+
 ** Get Things Done 工作方法
+- Coders at Work 中对 jwz 的采访
+
+  “我就是列个单子，然后一项一项的划掉”
+
+  #+ATTR_LaTeX: :width 3cm
+  [[./jwz.ps]]
+
+- org-mode 演示（agenda 功能）
+
+  #+ATTR_LaTeX: :width 3cm
+  [[./org-mode.ps]]
+
+*** hello world
 ** Literate Programming
+
+- Knuth 的工作方法
+
+  #+ATTR_LaTeX: :height 3cm
+  [[./knuth.ps]]
+
+- org-mode 演示（knuth-mode）
+
+  #+ATTR_LaTeX: :width 3cm
+  [[./org-mode.ps]]
 
 * Flow
 

@@ -1,4 +1,4 @@
-#+Latex: \begin{CJK*}{UTF8}{simsun}
+#+latex_class: 中文演示
 #+Latex: \CJKtilde
 
 
@@ -6,7 +6,6 @@
 #+AUTHOR:    包昊军（钧钩）
 #+EMAIL:     baohaojun@gmail.com
 #+DATE:      2014-01-20
-#+LATEX_CLASS_OPTIONS: [presentation,CJKbookmarks]
 #+DESCRIPTION:
 #+KEYWORDS:
 #+LANGUAGE:  en
@@ -295,7 +294,6 @@ repo sync
 
 ** 多读，多写！
 *** 写出有趣的软件，发布到Google Play上
-#+Latex: \end{CJK*}
 
 # Local Variables: #
 # eval: (org-beamer-mode) #

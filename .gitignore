@@ -7,7 +7,6 @@
 *.pdf
 *.pyg
 *.xbb
-*.tex
 *.org.[0-9]*
 *.aux
 *.out

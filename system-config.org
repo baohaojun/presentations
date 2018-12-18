@@ -2,7 +2,7 @@
 #+Latex: \CJKtilde
 
 
-#+TITLE:     Programming by Wishful Thinking
+#+TITLE:     用四步法让编程变得更有趣
 #+AUTHOR:    Bao Haojun
 #+EMAIL:     baohaojun@gmail.com
 #+DATE:      2015-11-20
@@ -14,7 +14,7 @@
 #+BEAMER_THEME: Boadilla
 #+BEAMER_COLOR_THEME: crane
 
-* Wishful Thinking
+* Wishful Thinking（你想要什么）
 
 ** SICP 介绍（Structure and Interpretation of Computer Programs）
 

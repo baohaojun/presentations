@@ -2,7 +2,7 @@
 #+Latex: \CJKtilde
 
 
-#+TITLE:     用四步法让编程变得更有趣
+#+TITLE:     Programming for Fun
 #+AUTHOR:    Bao Haojun
 #+EMAIL:     baohaojun@gmail.com
 #+DATE:      2015-11-20
@@ -14,7 +14,7 @@
 #+BEAMER_THEME: Boadilla
 #+BEAMER_COLOR_THEME: crane
 
-* Wishful Thinking（你想要什么）
+* Wishful Thinking
 
 ** SICP 介绍（Structure and Interpretation of Computer Programs）
 
@@ -42,7 +42,6 @@
   #+ATTR_LaTeX: :width 3cm
   [[./org-mode.ps]]
 
-*** hello world
 ** Literate Programming
 
 - Knuth 的工作方法
@@ -55,6 +54,14 @@
   #+ATTR_LaTeX: :width 3cm
   [[./org-mode.ps]]
 
+* REPL（Read、Eval、Print、Loop）
+** 所有语言都适用的规则
+
+- Read 
+  * Lisp  是最简单的
+- Eval 求值（注意求值的规则！）
+  * 有些值求一次和求 N 次都是一样的
+  * 有些值不能求多次（如果想求多次，必须明确指定）
+  * 左值和右值
+
 * Flow
-
-

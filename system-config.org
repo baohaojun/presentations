@@ -54,14 +54,47 @@
   #+ATTR_LaTeX: :width 3cm
   [[./org-mode.ps]]
 
-* REPL（Read、Eval、Print、Loop）
-** 所有语言都适用的规则
+* Abstraction
 
-- Read 
-  * Lisp  是最简单的
-- Eval 求值（注意求值的规则！）
+** REPL（Read、Eval、Print、Loop）
+*** Read
+*** Eval
+- 注意求值的规则
   * 有些值求一次和求 N 次都是一样的
-  * 有些值不能求多次（如果想求多次，必须明确指定）
+  * 除此之外，不能随意求多次（如果想求多于一次，必须明确指定）
   * 左值和右值
 
+*** Print
+*** Loop
+
+* Style
+
+** 编码风格（规范）与表达沟通
+- 跳过所有语言、社区、公司的编码风格
+- The Elements of Style（所有编程语言风格书致敬的对象）
+- If you don't know how to pronounce a word, say it loud！Why compound ignorance with inaudibility？
+
+  -- E.B. White，The Elements of Style 的作者之一，著有“夏洛特的网”
+
+  * 个人而言，直接决定了我最喜欢的编程语言特性，是 shell 的“set -e”
+  * 或许我们应该学习 APUE 的作者的做法？他把每一个常用库函数，都自己封装了一下，比如 =close(fd) -> Close(fd)=，一旦发现错误返回值就退出
+  * 我在 AOSP 上进的一个 patch，就是没有检查 close 的返回值导致没有及时发现问题
+  * 不要猜，也不要让别人猜，我们不是在谈恋爱😅
+
+    - 比如 saveFile() 一百遍以确保 save 成功这种操作
+  * 波尔和费曼的故事，开会之前，先找费曼聊
+
 * Flow
+
+- 集中营里有人能活下来的秘密
+- 截了肢的人还能觉得自己比以前还幸福的秘密
+- “偏执于有用的细节，偏执于无用的细节，偏执于甚至不会被发现是有用还是无用的细节，这就是工匠精神”
+- “On Writing”一书作者的故事
+
+* 领导与责任
+
+** 关于原子弹研发过程中保密与安全的故事
+
+- 绝密任务，不能让纳粹知道消息
+  * 不告诉工人自己天天处理的是什么
+- 非常危险，万一超过“临界质量”的原料堆在一起，引发连锁反应。。。

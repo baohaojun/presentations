@@ -1,4 +1,4 @@
-% Created 2018-12-18 火 23:47
+% Created 2018-12-19 水 16:34
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation,dvipdfmx,CJKbookmarks]{beamer}
 \usepackage{CJKutf8}
@@ -43,9 +43,19 @@
 \CJKtilde
 
 \section{Wishful Thinking}
-\label{sec:org6208ac9}
+\label{sec:orgaee6256}
 
-\begin{frame}[fragile,label={sec:org20aebf1}]{SICP\thinspace 介绍（Structure and Interpretation of Computer Programs）}
+\begin{frame}[label={sec:orgc4fc2a6}]{Test}
+\begin{itemize}[<+->]
+\item item 1
+\item item 2
+\end{itemize}
+
+Let \(G\) be a finite group, and let \(H\) be
+a subgroup of \(G\).  Then the order of \(H\) divides the order of \(G\).
+\end{frame}
+
+\begin{frame}[fragile,label={sec:org3841833}]{SICP\thinspace 介绍（Structure and Interpretation of Computer Programs）}
  \begin{block}{怎么定义有理数及其各种运算？}
 \end{block}
 \begin{block}{很简单，假设我们有\thinspace 3\thinspace 个函数：\texttt{ｍａｋｅ－有理数}，\texttt{取分母}，\texttt{取分子}}
@@ -60,7 +70,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgc429e7c}]{Get Things Done\thinspace 工作方法}
+\begin{frame}[label={sec:org264a68c}]{Get Things Done\thinspace 工作方法}
 \begin{itemize}
 \item Coders at Work\thinspace 中对\thinspace jwz\thinspace 的采访
 
@@ -78,7 +88,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org12ae752}]{Literate Programming}
+\begin{frame}[label={sec:orge0fa0e4}]{Literate Programming}
 \begin{itemize}
 \item Knuth\thinspace 的工作方法
 
@@ -95,17 +105,17 @@
 \end{frame}
 
 \section{Abstraction}
-\label{sec:orgaa436a3}
+\label{sec:org0b8d41a}
 
-\begin{frame}[label={sec:org4d6b9fc}]{REPL（Read、Eval、Print、Loop）}
+\begin{frame}[label={sec:org064ae42}]{REPL（Read、Eval、Print、Loop）}
 \begin{block}{Read}
 \end{block}
 \begin{block}{Eval}
 \begin{itemize}
-\item 注意求值的规则
+\item 注意求值的次数限制（只能求一次）
 \begin{itemize}
 \item 有些值求一次和求\thinspace N\thinspace 次都是一样的
-\item 除此之外，不能随意求多次（如果想求多于一次，必须明确指定）
+\item 除此之外，不能随意求多次（如果想求多于一次，必须明确指定——比如用\thinspace eval\thinspace 函数）
 \item 左值和右值
 \end{itemize}
 \end{itemize}
@@ -118,9 +128,9 @@
 \end{frame}
 
 \section{Style}
-\label{sec:org6640877}
+\label{sec:org62d627c}
 
-\begin{frame}[fragile,label={sec:orgcc79dcf}]{编码风格（规范）与表达沟通}
+\begin{frame}[fragile,label={sec:orgf4bb7dc}]{编码风格（规范）与表达沟通}
  \begin{itemize}
 \item 跳过所有语言、社区、公司的编码风格
 \item The Elements of Style（所有编程语言风格书致敬的对象）
@@ -131,11 +141,10 @@
 \begin{itemize}
 \item 个人而言，直接决定了我最喜欢的编程语言特性，是\thinspace shell\thinspace 的“set -e”
 \item 或许我们应该学习\thinspace APUE\thinspace 的作者的做法？他把每一个常用库函数，都自己封装了一下，比如\thinspace \texttt{close(fd) -> Close(fd)}，一旦发现错误返回值就退出
-\item 我在\thinspace AOSP\thinspace 上进的一个\thinspace patch，就是没有检查\thinspace close\thinspace 的返回值导致没有及时发现问题
-\item 不要猜，也不要让别人猜，我们不是在谈恋爱\text{\includegraphics[width=1em,valign=t,raise=0.1em,natwidth=48
+\item 我在\thinspace AOSP\thinspace 上进的一个\thinspace \href{https://android.googlesource.com/platform/frameworks/av/+/5225ba0\%255E\%2521/\#F1}{patch}，就是没有检查\thinspace close\thinspace 的返回值导致没有及时发现问题
+\item 不要猜，也不要让别人猜，我们不是在处对象\text{\includegraphics[width=1em,valign=t,raise=0.1em,natwidth=48
 bp,natheight=48
 bp]{/home/bhj/src/github/Wrench/release/emojis/iphone-new/SMILING_FACE_WITH_OPEN_MOUTH_AND_COLD_SWEAT.png}}
-
 \begin{itemize}
 \item 比如\thinspace saveFile()\thinspace 一百遍以确保\thinspace save\thinspace 成功这种操作
 \end{itemize}
@@ -145,25 +154,58 @@ bp]{/home/bhj/src/github/Wrench/release/emojis/iphone-new/SMILING_FACE_WITH_OPEN
 \end{frame}
 
 \section{Flow}
-\label{sec:org65deea5}
+\label{sec:orgdc2180e}
+
+\begin{frame}[label={sec:org939f080}]{Flow}
+\begin{block}{Flow\thinspace 的模型}
+\begin{center}
+\includegraphics[width=4cm]{./images/flow.ps}
+\end{center}
 
 \begin{itemize}
 \item 集中营里有人能活下来的秘密
 \item 截了肢的人还能觉得自己比以前还幸福的秘密
 \item “偏执于有用的细节，偏执于无用的细节，偏执于甚至不会被发现是有用还是无用的细节，这就是工匠精神”
 \item “On Writing”一书作者的故事
+\item Be Water My Friend -- Bruce Lee.
 \end{itemize}
+\end{block}
+\end{frame}
 
-\section{领导与责任}
-\label{sec:orgdbec944}
+\section{领导、决策与责任}
+\label{sec:orgb96292d}
 
-\begin{frame}[label={sec:orge60f6c3}]{关于原子弹研发过程中保密与安全的故事}
+\begin{frame}[label={sec:org31547c6}]{关于原子弹研发过程中保密与安全决策的故事}
 \begin{itemize}
 \item 绝密任务，不能让纳粹知道消息
 \begin{itemize}
 \item 不告诉工人自己天天处理的是什么
 \end{itemize}
 \item 非常危险，万一超过“临界质量”的原料堆在一起，引发连锁反应。。。
+\item 最后找一个上校报告，上校说，给我\thinspace 5\thinspace 分钟时间
+\end{itemize}
+\end{frame}
+
+\begin{frame}[label={sec:org68d7a14}]{关于决策系统的思考}
+\begin{itemize}
+\item 5\thinspace 分钟就做一个决定
+\item 决定的影响有多深远？
+
+\begin{itemize}
+\item 推荐\thinspace The Fifth Discipline
+\end{itemize}
+\end{itemize}
+\end{frame}
+
+\section{参考书目}
+\label{sec:org377bb04}
+
+\begin{frame}[label={sec:orgb37fd17}]{参考书目}
+\begin{itemize}
+\item Coders at Work
+\item The Fifth Discipline: The Art \& Practice of the Learning Organization
+\item Flow: The Psychology of Optimal Experience
+\item SURELY YOU ARE JOKING, MR. FEYNMAN!
 \end{itemize}
 \end{frame}
 \end{CJK*}

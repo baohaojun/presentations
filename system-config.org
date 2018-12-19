@@ -1,6 +1,6 @@
 #+Latex_class: 中文演示
 #+Latex: \CJKtilde
-
+#+STARTUP: beamer
 
 #+TITLE:     Programming for Fun
 #+AUTHOR:    Bao Haojun
@@ -15,6 +15,14 @@
 #+BEAMER_COLOR_THEME: crane
 
 * Wishful Thinking
+
+** Test
+   #+ATTR_BEAMER: :overlay <+->
+   - item 1
+   - item 2
+
+   Let $G$ be a finite group, and let $H$ be
+   a subgroup of $G$.  Then the order of $H$ divides the order of $G$.
 
 ** SICP 介绍（Structure and Interpretation of Computer Programs）
 
@@ -59,9 +67,9 @@
 ** REPL（Read、Eval、Print、Loop）
 *** Read
 *** Eval
-- 注意求值的规则
+- 注意求值的次数限制（只能求一次）
   * 有些值求一次和求 N 次都是一样的
-  * 除此之外，不能随意求多次（如果想求多于一次，必须明确指定）
+  * 除此之外，不能随意求多次（如果想求多于一次，必须明确指定——比如用 eval 函数）
   * 左值和右值
 
 *** Print
@@ -78,23 +86,46 @@
 
   * 个人而言，直接决定了我最喜欢的编程语言特性，是 shell 的“set -e”
   * 或许我们应该学习 APUE 的作者的做法？他把每一个常用库函数，都自己封装了一下，比如 =close(fd) -> Close(fd)=，一旦发现错误返回值就退出
-  * 我在 AOSP 上进的一个 patch，就是没有检查 close 的返回值导致没有及时发现问题
-  * 不要猜，也不要让别人猜，我们不是在谈恋爱😅
-
+  * 我在 AOSP 上进的一个 [[https://android.googlesource.com/platform/frameworks/av/+/5225ba0%255E%2521/#F1][patch]]，就是没有检查 close 的返回值导致没有及时发现问题
+  * 不要猜，也不要让别人猜，我们不是在处对象😅
     - 比如 saveFile() 一百遍以确保 save 成功这种操作
   * 波尔和费曼的故事，开会之前，先找费曼聊
 
 * Flow
 
+** Flow
+*** Flow 的模型
+
+  #+ATTR_LaTeX: :width 4cm
+  [[./images/flow.ps]]
+
 - 集中营里有人能活下来的秘密
 - 截了肢的人还能觉得自己比以前还幸福的秘密
 - “偏执于有用的细节，偏执于无用的细节，偏执于甚至不会被发现是有用还是无用的细节，这就是工匠精神”
 - “On Writing”一书作者的故事
+- Be Water My Friend -- Bruce Lee.
 
-* 领导与责任
+* 领导、决策与责任
 
-** 关于原子弹研发过程中保密与安全的故事
+** 关于原子弹研发过程中保密与安全决策的故事
 
 - 绝密任务，不能让纳粹知道消息
   * 不告诉工人自己天天处理的是什么
 - 非常危险，万一超过“临界质量”的原料堆在一起，引发连锁反应。。。
+- 最后找一个上校报告，上校说，给我 5 分钟时间
+
+** 关于决策系统的思考
+- 5 分钟就做一个决定
+- 决定的影响有多深远？
+
+  * 推荐 The Fifth Discipline
+
+* 参考书目
+
+** 参考书目
+- Coders at Work
+- The Fifth Discipline: The Art & Practice of the Learning Organization
+- Flow: The Psychology of Optimal Experience
+- SURELY YOU ARE JOKING, MR. FEYNMAN!
+
+

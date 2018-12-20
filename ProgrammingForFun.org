@@ -56,6 +56,12 @@
 
 * Abstraction
 
+** How to Design Programs
+
+*** Abstraction & Similarity
+*** Similarity & Copying & Problems
+*** Similarity & Learning
+
 ** REPL（Read、Eval、Print、Loop）
 *** Read
 *** Eval
@@ -133,6 +139,8 @@
    :BEAMER_env: fullframe
    :END:
 - Coders at Work
+- SICP
+- HTDP
 - The Fifth Discipline: The Art & Practice of the Learning Organization
 - Flow: The Psychology of Optimal Experience
 - SURELY YOU ARE JOKING, MR. FEYNMAN!

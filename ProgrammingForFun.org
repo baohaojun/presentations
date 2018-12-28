@@ -3,9 +3,10 @@
 #+STARTUP: beamer
 
 #+TITLE:     Programming for Fun
+#+SUBTITLE:  新年快乐，快乐编程
 #+AUTHOR:    Bao Haojun
 #+EMAIL:     baohaojun@gmail.com
-#+DATE:      2015-11-20
+#+DATE:      2018-12-28
 #+DESCRIPTION:
 #+KEYWORDS:
 #+LANGUAGE:  en
@@ -14,22 +15,31 @@
 #+BEAMER_THEME: Boadilla
 #+BEAMER_COLOR_THEME: crane
 
-* Wishful Thinking
+* Wishful Thinking（新年要许愿哦）
 
 ** SICP 介绍（Structure and Interpretation of Computer Programs）
 
-*** 怎么定义有理数及其各种运算？
-*** 很简单，假设我们有 3 个函数：=ｍａｋｅ－有理数=，=取分母=，=取分子=
-*** 举例：有理数乘法
+*** 一个小目标？
 
-#+BEGIN_SRC emacs-lisp
-  (ｄｅｆｕｎ 有理数乘法 (有理数ａ 有理数ｂ)
-    (ｍａｋｅ－有理数
-     (* (取分子 有理数ａ) (取分子 有理数ｂ))
-     (* (取分母 有理数ａ) (取分母 有理数ｂ))))
-#+END_SRC
+#+BEAMER: \pause
+*** 怎么定义有理数及其各种运算？
+
+#+BEAMER: \pause
+#+ATTR_BEAMER: :overlay <+->
+- 很简单，假设我们有 3 个函数：=ｍａｋｅ－有理数=，=取分母=，=取分子=
+- 举例：有理数乘法
+
+  #+BEGIN_SRC emacs-lisp
+    (ｄｅｆｕｎ 有理数乘法 (有理数ａ 有理数ｂ)
+      (ｍａｋｅ－有理数
+       (* (取分子 有理数ａ) (取分子 有理数ｂ))
+       (* (取分母 有理数ａ) (取分母 有理数ｂ))))
+  #+END_SRC
 
 ** Get Things Done 工作方法
+
+#+BEAMER: \pause
+#+ATTR_BEAMER: :overlay <+->
 - Coders at Work 中对 jwz 的采访
 
   “我就是列个单子，然后一项一项的划掉”
@@ -42,8 +52,9 @@
   #+ATTR_LaTeX: :width 3cm
   [[./org-mode.ps]]
 
-** Literate Programming
+** Literate Programming（文艺青年的编程方法）
 
+#+ATTR_BEAMER: :overlay <+->
 - Knuth 的工作方法
 
   #+ATTR_LaTeX: :height 3cm
@@ -57,18 +68,21 @@
 * Abstraction
 
 ** How to Design Programs
-
-*** Abstraction & Similarity
+#+ATTR_BEAMER: :overlay <+->
+*** Abstraction（抽） & Similarity（象）
 *** Similarity & Copying & Problems
-*** Similarity & Learning
+*** Similarity & Learning & Oppotunities
 
 ** REPL（Read、Eval、Print、Loop）
+#+ATTR_BEAMER: :overlay <+->
 *** Read
 *** Eval
 - 注意求值的次数限制（只能求一次）
   * 有些值求一次和求 N 次都是一样的
   * 除此之外，不能随意求多次（如果想求多于一次，必须明确指定——比如用 eval 函数）
-  * 左值和右值
+  
+    ~x=y; y=z; echo $x~
+  * 左值和右值有没有分别？（Tcl 和 Perl 的对比）
 
 *** Print
 *** Loop
@@ -76,18 +90,15 @@
 * Style
 
 ** 编码风格（规范）与表达沟通
+#+ATTR_BEAMER: :overlay <+->
 - 跳过所有语言、社区、公司的编码风格
 - The Elements of Style（所有编程语言风格书致敬的对象）
 - If you don't know how to pronounce a word, say it loud！Why compound ignorance with inaudibility？
-
-  -- E.B. White，The Elements of Style 的作者之一，著有“夏洛特的网”
-
+  * -- E.B. White，The Elements of Style 的作者之一，著有“夏洛特的网”
   * 个人而言，直接决定了我最喜欢的编程语言特性，是 shell 的“set -e”
   * 或许我们应该学习 APUE 的作者的做法？他把每一个常用库函数，都自己封装了一下，比如 =close(fd) -> Close(fd)=，一旦发现错误返回值就退出
-  * 我在 AOSP 上进的一个 [[https://android.googlesource.com/platform/frameworks/av/+/5225ba0%255E%2521/#F1][patch]]，就是没有检查 close 的返回值导致没有及时发现问题
-  * 不要让自己猜，也不要让别人猜😅
-    - 比如 saveFile() 一百遍以确保 save 成功这种操作
-  * 波尔和费曼的故事，开会之前，先找费曼聊
+  # * 我在 AOSP 上进的一个 [[https://android.googlesource.com/platform/frameworks/av/+/5225ba0%255E%2521/#F1][patch]]，就是没有检查 close 的返回值导致没有及时发现问题
+  * 波尔和费曼的故事：开会之前，先找费曼聊
 
 * Flow
 
@@ -96,19 +107,19 @@
    :BEAMER_env: fullframe
    :END:
 *** Flow 的模型
-
   #+ATTR_LaTeX: :width 4cm
   [[./images/flow.ps]]
-
-- 集中营里有人能活下来的秘密
-- 截了肢的人还能觉得自己比以前还幸福的秘密
+#+BEAMER: \pause
+#+ATTR_BEAMER: :overlay <+->
+- 集中营里有人能活下来？
+- 截了肢的人还能觉得自己比以前还幸福？
 - “偏执于有用的细节，偏执于无用的细节，偏执于甚至不会被发现是有用还是无用的细节，这就是工匠精神”
 - “On Writing”一书作者的故事
-- Be Water My Friend -- Bruce Lee.
+- Be Water My Friend
 
 * 领导、决策与系统
 
-** 关于原子弹研发过程中保密与安全决策的故事
+** 原子弹研发的保密和安全
 
 - 绝密任务，不能让纳粹知道消息
   * 不告诉工人自己天天处理的是什么
@@ -118,10 +129,9 @@
 ** 关于决策系统的思考
 - 5 分钟就做一个决定？
 - 决定的影响有多深远？
-
   * 推荐 The Fifth Discipline
 
-* 文档和源码
+* 学习通过编程来学习
 
 ** 文档和源码                                                                   :B_fullframe:
    :PROPERTIES:
@@ -140,7 +150,7 @@
    :END:
 - Coders at Work
 - SICP
-- HTDP
+- HtDP
 - The Fifth Discipline: The Art & Practice of the Learning Organization
 - Flow: The Psychology of Optimal Experience
 - SURELY YOU ARE JOKING, MR. FEYNMAN!

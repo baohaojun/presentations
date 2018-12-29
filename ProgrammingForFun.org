@@ -12,8 +12,8 @@
 #+LANGUAGE:  en
 #+OPTIONS:   H:2
 
-#+BEAMER_THEME: Boadilla
-#+BEAMER_COLOR_THEME: crane
+#+BEAMER_THEME: EastLansing
+#+BEAMER_COLOR_THEME: default
 
 * Wishful Thinking（新年要许愿哦）
 
@@ -68,9 +68,12 @@
 * Abstraction
 
 ** How to Design Programs
-#+ATTR_BEAMER: :overlay <+->
+
+#+BEAMER: \pause
 *** Abstraction（抽） & Similarity（象）
+#+BEAMER: \pause
 *** Similarity & Copying & Problems
+#+BEAMER: \pause
 *** Similarity & Learning & Oppotunities
 
 ** REPL（Read、Eval、Print、Loop）
@@ -151,6 +154,7 @@
 - Coders at Work
 - SICP
 - HtDP
+- The Elements of Style
 - The Fifth Discipline: The Art & Practice of the Learning Organization
 - Flow: The Psychology of Optimal Experience
 - SURELY YOU ARE JOKING, MR. FEYNMAN!

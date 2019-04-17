@@ -3,7 +3,7 @@
 #+STARTUP: beamer
 
 #+TITLE:     Programming for Fun
-#+SUBTITLE:  新年快乐，快乐编程
+#+SUBTITLE:  快乐编程
 #+AUTHOR:    Bao Haojun
 #+EMAIL:     baohaojun@gmail.com
 #+DATE:      2018-12-28
@@ -15,7 +15,7 @@
 #+BEAMER_THEME: EastLansing
 #+BEAMER_COLOR_THEME: default
 
-* Wishful Thinking（新年要许愿哦）
+* Wishful Thinking（许愿式编程）
 
 ** SICP 介绍（Structure and Interpretation of Computer Programs）
 
@@ -83,7 +83,7 @@
 - 注意求值的次数限制（只能求一次）
   * 有些值求一次和求 N 次都是一样的
   * 除此之外，不能随意求多次（如果想求多于一次，必须明确指定——比如用 eval 函数）
-  
+
     ~x=y; y=z; echo $x~
   * 左值和右值有没有分别？（Tcl 和 Perl 的对比）
 

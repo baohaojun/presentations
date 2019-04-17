@@ -1,4 +1,4 @@
-% Created 2018-12-29 土 11:23
+% Created 2019-04-17 水 09:51
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation,dvipdfmx,CJKbookmarks]{beamer}
 \usepackage{CJKutf8}
@@ -25,13 +25,13 @@
 \author{Bao Haojun}
 \date{2018-12-28}
 \title{Programming for Fun}
-\subtitle{新年快乐，快乐编程}
+\subtitle{快乐编程}
 \hypersetup{
  pdfauthor={Bao Haojun},
  pdftitle={Programming for Fun},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
+ pdfcreator={Emacs 26.2 (Org mode 9.1.9)},
  pdflang={English}}
 \begin{document}
 
@@ -42,10 +42,10 @@
 
 \CJKtilde
 
-\section{Wishful Thinking（新年要许愿哦）}
-\label{sec:org58714c7}
+\section{Wishful Thinking（许愿式编程）}
+\label{sec:org418e153}
 
-\begin{frame}[fragile,label={sec:org4ec0836}]{SICP 介绍（Structure and Interpretation of Computer Programs）}
+\begin{frame}[fragile,label={sec:org63cbb01}]{SICP 介绍（Structure and Interpretation of Computer Programs）}
  \begin{block}{一个小目标？}
 \pause
 \end{block}
@@ -65,7 +65,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgd423f94}]{Get Things Done 工作方法}
+\begin{frame}[label={sec:org4e282a9}]{Get Things Done 工作方法}
 \pause
 \begin{itemize}[<+->]
 \item Coders at Work 中对 jwz 的采访
@@ -84,7 +84,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orga7dfb74}]{Literate Programming（文艺青年的编程方法）}
+\begin{frame}[label={sec:org6f8c9b8}]{Literate Programming（文艺青年的编程方法）}
 \begin{itemize}[<+->]
 \item Knuth 的工作方法
 
@@ -101,9 +101,9 @@
 \end{frame}
 
 \section{Abstraction}
-\label{sec:orge36483b}
+\label{sec:orgefd306b}
 
-\begin{frame}[label={sec:orgb6c51a3}]{How to Design Programs}
+\begin{frame}[label={sec:orgdcfa7ad}]{How to Design Programs}
 \pause
 \begin{block}{Abstraction（抽） \& Similarity（象）}
 \pause
@@ -115,7 +115,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:orga7ce35b}]{REPL（Read、Eval、Print、Loop）}
+\begin{frame}[fragile,label={sec:org3873973}]{REPL（Read、Eval、Print、Loop）}
  \begin{block}{Read}
 \end{block}
 \begin{block}{Eval}
@@ -138,9 +138,9 @@
 \end{frame}
 
 \section{Style}
-\label{sec:org8523056}
+\label{sec:orgc3fb77f}
 
-\begin{frame}[fragile,label={sec:org361b44d}]{编码风格（规范）与表达沟通}
+\begin{frame}[fragile,label={sec:org34168c6}]{编码风格（规范）与表达沟通}
  \begin{itemize}[<+->]
 \item 跳过所有语言、社区、公司的编码风格
 \item The Elements of Style（所有编程语言风格书致敬的对象）
@@ -158,9 +158,9 @@
 \end{frame}
 
 \section{Flow}
-\label{sec:org9a3ce99}
+\label{sec:org5798036}
 
-\begin{frame}[label={sec:orgba22ea6}]{}
+\begin{frame}[label={sec:orgaa28374}]{}
 \begin{block}{Flow 的模型}
 \begin{center}
 \includegraphics[width=4cm]{./images/flow.ps}
@@ -177,9 +177,9 @@
 \end{frame}
 
 \section{领导、决策与系统}
-\label{sec:org28ef7c9}
+\label{sec:orgcbdf679}
 
-\begin{frame}[label={sec:org99e80a0}]{原子弹研发的保密和安全}
+\begin{frame}[label={sec:orgcfbbf55}]{原子弹研发的保密和安全}
 \begin{itemize}
 \item 绝密任务，不能让纳粹知道消息
 \begin{itemize}
@@ -190,7 +190,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6a1a1b1}]{关于决策系统的思考}
+\begin{frame}[label={sec:org2f968f9}]{关于决策系统的思考}
 \begin{itemize}
 \item 5 分钟就做一个决定？
 \item 决定的影响有多深远？
@@ -201,9 +201,9 @@
 \end{frame}
 
 \section{学习通过编程来学习}
-\label{sec:orgc594f47}
+\label{sec:org24df95b}
 
-\begin{frame}[label={sec:org3c0abeb}]{}
+\begin{frame}[label={sec:org6d2c66a}]{}
 \begin{block}{man 手册中的搜索、Text::CSV 中的 imenu}
 \end{block}
 \begin{block}{info 手册中的搜索}
@@ -213,13 +213,14 @@
 \end{frame}
 
 \section{参考书目}
-\label{sec:org1020af6}
+\label{sec:orge9c99e8}
 
-\begin{frame}[label={sec:org6f73a9f}]{}
+\begin{frame}[label={sec:org7534d75}]{}
 \begin{itemize}
 \item Coders at Work
 \item SICP
 \item HtDP
+\item The Elements of Style
 \item The Fifth Discipline: The Art \& Practice of the Learning Organization
 \item Flow: The Psychology of Optimal Experience
 \item SURELY YOU ARE JOKING, MR. FEYNMAN!

@@ -1,0 +1,41 @@
+#+Latex_class: 中文演示
+#+Latex: \CJKtilde
+#+STARTUP: beamer
+
+#+TITLE:     Programming by Copy & Pasting
+#+SUBTITLE: 天下程序一大抄，看你会抄不会抄
+#+AUTHOR:    Bao Haojun
+#+EMAIL:     baohaojun@gmail.com
+#+DATE:      2018-12-28
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:2
+
+#+BEAMER_THEME: EastLansing
+#+BEAMER_COLOR_THEME: default
+
+* TIMTOWTDI 和 TOOWTDI
+
+** TIMTOWTDI 和 TOOWTDI
+*** TIMTOWTDI
+#+BEAMER: \pause
+*** TOOWTDI
+#+BEAMER: \pause
+
+#+BEGIN_QUOTE
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you're Dutch.
+#+END_QUOTE
+
+* Search for what to copy
+
+** Search for what to copy
+
+*** Search for what to copy
+- 用 opengrok
+- 用 beagrep
+
+#+BEAMER: \pause
+*** Search multiple times
+** 结合李东坡的几个 Patch Review 展开讨论一下

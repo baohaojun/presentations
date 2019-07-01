@@ -1,4 +1,4 @@
-% Created 2019-04-17 水 09:51
+% Created 2019-07-01 月 10:40
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation,dvipdfmx,CJKbookmarks]{beamer}
 \usepackage{CJKutf8}
@@ -43,9 +43,9 @@
 \CJKtilde
 
 \section{Wishful Thinking（许愿式编程）}
-\label{sec:org418e153}
+\label{sec:org78dde94}
 
-\begin{frame}[fragile,label={sec:org63cbb01}]{SICP 介绍（Structure and Interpretation of Computer Programs）}
+\begin{frame}[fragile,label={sec:orgf97c34b}]{SICP 介绍（Structure and Interpretation of Computer Programs）}
  \begin{block}{一个小目标？}
 \pause
 \end{block}
@@ -65,7 +65,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org4e282a9}]{Get Things Done 工作方法}
+\begin{frame}[label={sec:orgccdb30b}]{Get Things Done 工作方法}
 \pause
 \begin{itemize}[<+->]
 \item Coders at Work 中对 jwz 的采访
@@ -84,7 +84,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org6f8c9b8}]{Literate Programming（文艺青年的编程方法）}
+\begin{frame}[label={sec:orgd71bea8}]{Literate Programming（文艺青年的编程方法）}
 \begin{itemize}[<+->]
 \item Knuth 的工作方法
 
@@ -101,9 +101,9 @@
 \end{frame}
 
 \section{Abstraction}
-\label{sec:orgefd306b}
+\label{sec:org97d6362}
 
-\begin{frame}[label={sec:orgdcfa7ad}]{How to Design Programs}
+\begin{frame}[label={sec:org03c6a34}]{How to Design Programs}
 \pause
 \begin{block}{Abstraction（抽） \& Similarity（象）}
 \pause
@@ -115,7 +115,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:org3873973}]{REPL（Read、Eval、Print、Loop）}
+\begin{frame}[fragile,label={sec:orgb2fc971}]{REPL（Read、Eval、Print、Loop）}
  \begin{block}{Read}
 \end{block}
 \begin{block}{Eval}
@@ -138,9 +138,9 @@
 \end{frame}
 
 \section{Style}
-\label{sec:orgc3fb77f}
+\label{sec:org7aeadad}
 
-\begin{frame}[fragile,label={sec:org34168c6}]{编码风格（规范）与表达沟通}
+\begin{frame}[fragile,label={sec:org23b27a2}]{编码风格（规范）与表达沟通}
  \begin{itemize}[<+->]
 \item 跳过所有语言、社区、公司的编码风格
 \item The Elements of Style（所有编程语言风格书致敬的对象）
@@ -158,9 +158,9 @@
 \end{frame}
 
 \section{Flow}
-\label{sec:org5798036}
+\label{sec:org5670a93}
 
-\begin{frame}[label={sec:orgaa28374}]{}
+\begin{frame}[label={sec:org85e76ad}]{}
 \begin{block}{Flow 的模型}
 \begin{center}
 \includegraphics[width=4cm]{./images/flow.ps}
@@ -177,9 +177,9 @@
 \end{frame}
 
 \section{领导、决策与系统}
-\label{sec:orgcbdf679}
+\label{sec:orgd5c8192}
 
-\begin{frame}[label={sec:orgcfbbf55}]{原子弹研发的保密和安全}
+\begin{frame}[label={sec:orgcd282c2}]{原子弹研发的保密和安全}
 \begin{itemize}
 \item 绝密任务，不能让纳粹知道消息
 \begin{itemize}
@@ -190,7 +190,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org2f968f9}]{关于决策系统的思考}
+\begin{frame}[label={sec:orgc5fb5c2}]{关于决策系统的思考}
 \begin{itemize}
 \item 5 分钟就做一个决定？
 \item 决定的影响有多深远？
@@ -201,9 +201,9 @@
 \end{frame}
 
 \section{学习通过编程来学习}
-\label{sec:org24df95b}
+\label{sec:org1522c52}
 
-\begin{frame}[label={sec:org6d2c66a}]{}
+\begin{frame}[label={sec:org177081e}]{}
 \begin{block}{man 手册中的搜索、Text::CSV 中的 imenu}
 \end{block}
 \begin{block}{info 手册中的搜索}
@@ -213,9 +213,9 @@
 \end{frame}
 
 \section{参考书目}
-\label{sec:orge9c99e8}
+\label{sec:org20bd93c}
 
-\begin{frame}[label={sec:org7534d75}]{}
+\begin{frame}[label={sec:org2f6ef4f}]{}
 \begin{itemize}
 \item Coders at Work
 \item SICP

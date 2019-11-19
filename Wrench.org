@@ -1,4 +1,4 @@
-#+Latex: \begin{CJK*}{UTF8}{simsun}
+#+latex_class: 中文演示
 #+Latex: \CJKtilde
 
 
@@ -6,7 +6,6 @@
 #+AUTHOR:    ［锤子科技 smartisan］ 包昊军
 #+EMAIL:     baohaojun@gmail.com
 #+DATE:      2017-05-08
-#+LATEX_CLASS_OPTIONS: [presentation,CJKbookmarks]
 #+DESCRIPTION:
 #+KEYWORDS:
 #+LANGUAGE:  en
@@ -116,13 +115,6 @@
     - 用小扳手给作者打钱［疑问］［捂脸］［机智］
     - 微信公众号： Programate
 
-#+Latex: \end{CJK*}
-
-# Local Variables: #
-# eval: (org-beamer-mode) #
-# eval: (mmm-mode 1) #
-# End: #
-
 * 🥚高清阅读模式
 ** 在手机上沉浸式阅读电子书
 
@@ -137,3 +129,7 @@
 *** 不是有网页版 Kindle Reader 吗？
     - 跟手持 Kindle 设备间的不同步问题［吐］［衰］
 *** 跟 [[https://github.com/baohaojun/system-config][system-config]] 结合，手机上的金山词霸［鼓掌］
+# Local Variables: #
+# eval: (org-beamer-mode) #
+# eval: (mmm-mode 1) #
+# End: #

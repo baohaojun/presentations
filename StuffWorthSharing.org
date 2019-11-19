@@ -1,0 +1,166 @@
+#+Latex_class: 中文演示
+#+Latex: \CJKtilde
+#+STARTUP: beamer
+
+#+TITLE:     Stuff Worth Sharing
+#+SUBTITLE:  一些值得分享的东西
+#+AUTHOR:    Bao Haojun
+#+EMAIL:     baohaojun@gmail.com
+#+DATE:      2018-12-28
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:2
+
+#+BEAMER_THEME: EastLansing
+#+BEAMER_COLOR_THEME: default
+
+* Wishful Thinking（许愿式编程）
+
+** SICP 介绍（Structure and Interpretation of Computer Programs）
+
+*** 一个小目标？[嘿嘿]
+
+#+BEAMER: \pause
+*** 怎么定义有理数及其各种运算？
+
+#+BEAMER: \pause
+#+ATTR_BEAMER: :overlay <+->
+- 很简单，假设我们有 3 个函数：=ｍａｋｅ－有理数=，=取分母=，=取分子=
+- 举例：有理数乘法
+
+  #+BEGIN_SRC emacs-lisp
+    (ｄｅｆｕｎ 有理数乘法 (有理数ａ 有理数ｂ)
+      (ｍａｋｅ－有理数
+       (* (取分子 有理数ａ) (取分子 有理数ｂ))
+       (* (取分母 有理数ａ) (取分母 有理数ｂ))))
+  #+END_SRC
+
+** Get Things Done 工作方法
+
+#+BEAMER: \pause
+#+ATTR_BEAMER: :overlay <+->
+- Coders at Work 中对 jwz 的采访
+
+  “我就是列个单子，然后一项一项的划掉”
+
+  #+ATTR_LaTeX: :width 3cm
+  [[./jwz.ps]]
+
+- org-mode 演示（agenda 功能）
+
+  #+ATTR_LaTeX: :width 3cm
+  [[./org-mode.ps]]
+
+** Literate Programming（文艺青年的编程方法）
+
+#+ATTR_BEAMER: :overlay <+->
+- Knuth 的工作方法
+
+  #+ATTR_LaTeX: :height 3cm
+  [[./knuth.ps]]
+
+- org-mode 演示（knuth-mode）
+
+  #+ATTR_LaTeX: :width 3cm
+  [[./org-mode.ps]]
+
+** 用 Org-Mode 发日报，同时用它做 GTD
+
+- 可以尽情地释放自己的思路
+- 可以简洁明了地发送日报
+- 可不可以一步即设置好日报的详尽程度？
+
+* Abstraction
+
+** How to Design Programs
+
+#+BEAMER: \pause
+*** Abstraction（抽） & Similarity（象）
+#+BEAMER: \pause
+*** Similarity & Copying & Problems
+#+BEAMER: \pause
+*** Similarity & Learning & Oppotunities
+
+** REPL（Read、Eval、Print、Loop）
+#+ATTR_BEAMER: :overlay <+->
+*** Read
+*** Eval
+- 注意求值的次数限制（只能求一次）
+  * 有些值求一次和求 N 次都是一样的
+  * 除此之外，不能随意求多次（如果想求多于一次，必须明确指定——比如用 eval 函数）
+
+    ~x=y; y=z; echo $x~
+  * 左值和右值有没有分别？（Tcl 和 Perl 的对比）
+
+*** Print
+*** Loop
+
+* Style
+
+** 编码风格（规范）与表达沟通
+#+ATTR_BEAMER: :overlay <+->
+- 跳过所有语言、社区、公司的编码风格
+- The Elements of Style（所有编程语言风格书致敬的对象）
+- If you don't know how to pronounce a word, say it loud！Why compound ignorance with inaudibility？
+  * -- E.B. White，The Elements of Style 的作者之一，著有“夏洛特的网”
+  * 个人而言，直接决定了我最喜欢的编程语言特性，是 shell 的“set -e”
+  * 或许我们应该学习 APUE 的作者的做法？他把每一个常用库函数，都自己封装了一下，比如 =close(fd) -> Close(fd)=，一旦发现错误返回值就退出
+  # * 我在 AOSP 上进的一个 [[https://android.googlesource.com/platform/frameworks/av/+/5225ba0%255E%2521/#F1][patch]]，就是没有检查 close 的返回值导致没有及时发现问题
+  * 波尔和费曼的故事：开会之前，先找费曼聊
+
+* Flow
+
+** Flow :B_fullframe:
+   :PROPERTIES:
+   :BEAMER_env: fullframe
+   :END:
+*** Flow 的模型
+  #+ATTR_LaTeX: :width 4cm
+  [[./images/flow.ps]]
+#+BEAMER: \pause
+#+ATTR_BEAMER: :overlay <+->
+- 集中营里有人能活下来？
+- 截了肢的人还能觉得自己比以前还幸福？
+- “偏执于有用的细节，偏执于无用的细节，偏执于甚至不会被发现是有用还是无用的细节，这就是工匠精神”
+- “On Writing”一书作者的故事
+- Be Water My Friend
+
+* 领导、决策与系统
+
+** 原子弹研发的保密和安全
+
+- 绝密任务，不能让纳粹知道消息
+  * 不告诉工人自己天天处理的是什么
+- 非常危险，万一超过“临界质量”的原料堆在一起，引发连锁反应。。。
+- 最后找一个上校报告，上校说，给我 5 分钟时间
+
+** 关于决策系统的思考
+- 5 分钟就做一个决定？
+- 决定的影响有多深远？
+  * 推荐 The Fifth Discipline
+
+* 学习通过编程来学习
+
+** 文档和源码                                                                   :B_fullframe:
+   :PROPERTIES:
+   :BEAMER_env: fullframe
+   :END:
+
+*** man 手册中的搜索、Text::CSV 中的 imenu
+*** info 手册中的搜索
+*** 源码搜索：beagrep
+
+* 参考书目
+
+** 参考书目 :B_fullframe:
+   :PROPERTIES:
+   :BEAMER_env: fullframe
+   :END:
+- Coders at Work
+- SICP
+- HtDP
+- The Elements of Style
+- The Fifth Discipline: The Art & Practice of the Learning Organization
+- Flow: The Psychology of Optimal Experience
+- SURELY YOU ARE JOKING, MR. FEYNMAN!

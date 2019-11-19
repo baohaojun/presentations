@@ -1,4 +1,4 @@
-% Created 2018-11-26 月 09:40
+% Created 2019-11-19 火 10:02
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation,dvipdfmx,CJKbookmarks]{beamer}
 \usepackage{CJKutf8}
@@ -24,13 +24,13 @@
 \usecolortheme{lily}
 \author{包昊军（钧钩）}
 \date{2014-01-20}
-\title{Android网络和数据}
+\title{Android 网络和数据\text{\includegraphics[width=1em,valign=t,raise=0.1em]{/home/bhj/src/github/Wrench/release/emojis/new-emojis/ali-29-HeiHei.png}}}
 \hypersetup{
  pdfauthor={包昊军（钧钩）},
- pdftitle={Android网络和数据},
+ pdftitle={Android 网络和数据\text{\includegraphics[width=1em,valign=t,raise=0.1em]{/home/bhj/src/github/Wrench/release/emojis/new-emojis/ali-29-HeiHei.png}}},
  pdfkeywords={},
  pdfsubject={},
- pdfcreator={Emacs 26.1 (Org mode 9.1.9)}, 
+ pdfcreator={Emacs 26.3 (Org mode 9.1.9)},
  pdflang={English}}
 \begin{document}
 
@@ -41,14 +41,13 @@
 
 \CJKtilde
 
-\begin{enumerate}
-\item 回顾
-\label{sec:org5aae1b3}
+\section{回顾}
+\label{sec:org4d40284}
 
-\begin{frame}[label={sec:org939d671}]{上节内容}
+\begin{frame}[label={sec:org7ca08fb}]{上节内容}
 \begin{block}{ListView \& Adapter}
 \end{block}
-\begin{block}{实现banner和列表视图List的同时滑动}
+\begin{block}{实现 banner 和列表视图 List 的同时滑动}
 \end{block}
 \begin{block}{删除列表中一行}
 \end{block}
@@ -56,32 +55,32 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org3cb7c42}]{往期回顾}
-\begin{block}{Android系统和环境}
+\begin{frame}[label={sec:org757b827}]{往期回顾}
+\begin{block}{Android 系统和环境}
 \end{block}
-\begin{block}{Activity等四大组件}
+\begin{block}{Activity 等四大组件}
 \end{block}
 \begin{block}{ListView}
 \end{block}
 \end{frame}
-\item 工具
-\label{sec:org14d2916}
-\begin{frame}[label={sec:org87b6b9c}]{粗野的Beagrep}
-\begin{block}{Grep 9G Android代码，只需0.23秒}
+\section{工具}
+\label{sec:orgb17983e}
+\begin{frame}[label={sec:orge5fb37d}]{粗野的 Beagrep}
+\begin{block}{Grep 9G Android 代码，只需 0.23 秒}
 \end{block}
 \begin{block}{阅读源代码的利器之一}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:org8f0836b}]{精细的grep-gtags}
-\begin{block}{综合了ctags (exuberant）、gtags、cscope}
+\begin{frame}[label={sec:org1008e00}]{精细的 grep-gtags}
+\begin{block}{综合了 ctags (exuberant）、gtags、cscope}
 \end{block}
-\begin{block}{可以与beagrep组合使用，获取函数调用位置}
+\begin{block}{可以与 beagrep 组合使用，获取函数调用位置}
 \end{block}
-\begin{block}{可以定位png文件，xml元素，这些也是源代码:-)}
+\begin{block}{可以定位 png 文件，xml 元素，这些也是源代码:-)}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:org0a671af}]{搞笑的Ajoke}
-\begin{block}{主要在使用grep-gtags和一些自制脚本}
+\begin{frame}[label={sec:orgc672857}]{搞笑的 Ajoke}
+\begin{block}{主要在使用 grep-gtags 和一些自制脚本}
 \end{block}
 \begin{block}{可以打印继承树}
 \begin{itemize}
@@ -90,32 +89,32 @@
 \end{block}
 \begin{block}{可以补齐函数}
 \end{block}
-\begin{block}{可以自动import}
+\begin{block}{可以自动 import}
 \end{block}
 \begin{block}{可以重载函数}
 \end{block}
-\begin{block}{将来会支持Exception}
+\begin{block}{将来会支持 Exception}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:org3764a63}]{可怕的skeleton-complete.el}
+\begin{frame}[label={sec:orgb24131a}]{可怕的 skeleton-complete.el}
 \begin{block}{打几个字符（骨架），补全整字、整句、整行、整段（血肉）}
 \end{block}
-\begin{block}{其实firefox也有类似的功能}
+\begin{block}{其实 firefox 也有类似的功能}
 \end{block}
-\begin{block}{Java IDE神器 IntelliJ IDEA 也有类似的功能}
+\begin{block}{Java IDE 神器 IntelliJ IDEA 也有类似的功能}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org3ecba9c}]{yasnippet}
+\begin{frame}[label={sec:org9a576c5}]{yasnippet}
 \begin{block}{另一个非常强大的补齐展开工具}
 \end{block}
 \begin{block}{用起来更正式，需要提前准备好展开脚本}
 \end{block}
 \end{frame}
 
-\item 网络
-\label{sec:orgc581fe0}
-\begin{frame}[label={sec:org69d0895}]{网络编程介绍}
+\section{网络}
+\label{sec:org4ac40a5}
+\begin{frame}[label={sec:orgaca18fb}]{网络编程介绍}
 \begin{block}{Socket（套接字）}
 \begin{itemize}
 \item Tcp，Udp，Unix Domain
@@ -123,10 +122,10 @@
 \end{itemize}
 \end{block}
 
-\begin{block}{HTTP通讯}
+\begin{block}{HTTP 通讯}
 \begin{itemize}
-\item HttpURLConnection （Android原生，性能更好）
-\item DefaultHttpClient （apache代码，早期bug较少）
+\item HttpURLConnection （Android 原生，性能更好）
+\item DefaultHttpClient （apache 代码，早期 bug 较少）
 \end{itemize}
 \end{block}
 
@@ -138,26 +137,26 @@
 \end{frame}
 
 
-\begin{frame}[label={sec:orgfdcf4c1}]{小练习}
-\begin{block}{获取一段JSON数据 (MainActivity1)}
+\begin{frame}[label={sec:orgdd0c634}]{小练习}
+\begin{block}{获取一段 JSON 数据 (MainActivity1)}
 \begin{itemize}
-\item AllIn4Demo代码位置
+\item AllIn4Demo 代码位置
 \url{http://10.125.206.165/allin4.zip}
 \end{itemize}
 \end{block}
 \begin{block}<2->{会出错}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:orgb5780b6}]{UI主线程和联网线程}
-\begin{block}{Android编程中，需要牢记：}
+\begin{frame}[label={sec:org0e65b44}]{UI 主线程和联网线程}
+\begin{block}{Android 编程中，需要牢记：}
 \begin{itemize}
-\item 要区分开UI主线程和工作线程
+\item 要区分开 UI 主线程和工作线程
 \end{itemize}
 \end{block}
 
 \begin{columns}
 \begin{column}{0.4\columnwidth}
-\begin{block}{Android网络操作必须用工作线程}
+\begin{block}{Android 网络操作必须用工作线程}
 \end{block}
 \end{column}
 \begin{column}{0.4\columnwidth}
@@ -167,26 +166,26 @@
 \end{columns}
 \begin{columns}
 \begin{column}{0.4\columnwidth}
-\begin{block}{工作线程不允许操作UI元素}
+\begin{block}{工作线程不允许操作 UI 元素}
 \end{block}
 \end{column}
 \begin{column}{0.4\columnwidth}
-\begin{block}<3->{操作UI元素的API都是线程不安全的，只能在一个线程中调用以保证线程安全}
+\begin{block}<3->{操作 UI 元素的 API 都是线程不安全的，只能在一个线程中调用以保证线程安全}
 \end{block}
 \end{column}
 \end{columns}
 \end{frame}
 
-\begin{frame}[label={sec:orgbd63715}]{工作线程与UI主线程间通信}
+\begin{frame}[label={sec:orgde651bf}]{工作线程与 UI 主线程间通信}
 \begin{block}{runOnUiThread}
 \begin{itemize}
-\item 工作线程中调用操作UI元素的Callback函数
+\item 工作线程中调用操作 UI 元素的 Callback 函数
 \end{itemize}
 \end{block}
 \begin{block}{Handler}
 \begin{itemize}
-\item 工作线程发送消息，UI线程处理消息
-\item 当然UI线程也可以给自己发消息
+\item 工作线程发送消息，UI 线程处理消息
+\item 当然 UI 线程也可以给自己发消息
 \end{itemize}
 \end{block}
 
@@ -197,7 +196,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:orgb30629a}]{runOnUiThread}
+\begin{frame}[fragile,label={sec:org68d6391}]{runOnUiThread}
  \begin{minted}[]{java}
 // In UI thread:
 new Thread(new Runnable() {
@@ -217,7 +216,7 @@ new Thread(new Runnable() {
 \end{minted}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:orgfeef6a4}]{Handler}
+\begin{frame}[fragile,label={sec:org9d1fa4a}]{Handler}
  \begin{minted}[]{java}
 Handler mHandler = new Handler() {
   public void handleMessage(Message msg) {
@@ -237,7 +236,7 @@ new Thread(new Runnable() {
 \end{minted}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:org96ee0b3}]{AsyncTask}
+\begin{frame}[fragile,label={sec:orgbf2c7bd}]{AsyncTask}
  \begin{minted}[]{java}
 private class MyAsyncTask
  extends AsyncTask<Param, Progress, Result> {
@@ -254,42 +253,42 @@ private class MyAsyncTask
 new MyAsyncTask().execute(...);
 \end{minted}
 \end{frame}
-\begin{frame}[label={sec:org6f9e31d}]{小练习}
-\begin{block}{用 runOnUiThread 实现线程间交互 (MainActivity2)}
+\begin{frame}[label={sec:org5d3f082}]{小练习}
+\begin{block}{用 runOnUiThread 实现线程间交互 (MainActivity2)}
 \end{block}
-\begin{block}{用 Handler 实现线程间交互 (MainActivity3)}
+\begin{block}{用 Handler 实现线程间交互 (MainActivity3)}
 \end{block}
-\begin{block}{用 AsyncTask 实现线程间交互 (MainActivity4)}
+\begin{block}{用 AsyncTask 实现线程间交互 (MainActivity4)}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org4427f39}]{WebView应用}
+\begin{frame}[label={sec:org11b3bf5}]{WebView 应用}
 \begin{block}{微博、微信客户端等的网页（网络应用）}
 \end{block}
-\begin{block}{CrossDict的实现（离线网页应用）}
+\begin{block}{CrossDict 的实现（离线网页应用）}
 \end{block}
 \end{frame}
 
-\item 数据
-\label{sec:org678f738}
-\begin{frame}[label={sec:org769e8a7}]{Android文件系统介绍}
-\begin{block}{ADB的使用}
+\section{数据}
+\label{sec:org08dc7b0}
+\begin{frame}[label={sec:orgf2e294d}]{Android 文件系统介绍}
+\begin{block}{ADB 的使用}
 \end{block}
-\begin{block}{Android文件系统目录结构}
+\begin{block}{Android 文件系统目录结构}
 \end{block}
-\begin{block}{App目录结构}
+\begin{block}{App 目录结构}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org3757fe6}]{小练习}
+\begin{frame}[label={sec:org217fc53}]{小练习}
 \begin{itemize}
-\item 用ADB安装Apk
-\item 用ADB卸载Apk
-\item 查看App的目录
+\item 用 ADB 安装 Apk
+\item 用 ADB 卸载 Apk
+\item 查看 App 的目录
 \end{itemize}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:org1602a59}]{Android系统数据存取}
+\begin{frame}[fragile,label={sec:org4e6177f}]{Android 系统数据存取}
  \begin{block}{SharedPreferences}
 \begin{minted}[]{java}
 SharedPreferences spf =
@@ -299,29 +298,29 @@ spf.edit().putFloat(String key, float value).commit();
 \end{minted}
 \end{block}
 
-\begin{block}{File：私有文件，sdcard上的文件，只读的asset资源文件}
+\begin{block}{File：私有文件，sdcard 上的文件，只读的 asset 资源文件}
 \begin{minted}[]{java}
 openFileInput(path); openFileOutput(path);
 Environment.getExternalStoragePublicDirectory(path);
 AssetManager am = getAssets(); am.open(path);
 \end{minted}
 \end{block}
-\begin{block}{Sqlite 单进程}
+\begin{block}{Sqlite 单进程}
 \end{block}
-\begin{block}{ContentProvider 多进程（联系人数据）}
+\begin{block}{ContentProvider 多进程（联系人数据）}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:orgf6a757f}]{小练习}
+\begin{frame}[label={sec:org122474f}]{小练习}
 \begin{block}{SharedPreferences}
 \begin{itemize}
-\item 每进一次Activity，把记数加1，并显示
-\item 查看 SharedPreferences 在文件系统中保存的位置
+\item 每进一次 Activity，把记数加 1，并显示
+\item 查看 SharedPreferences 在文件系统中保存的位置
 \end{itemize}
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:org85247b5}]{数据传递、共享}
- \begin{block}{Intent传递数据}
+\begin{frame}[fragile,label={sec:org31a5a39}]{数据传递、共享}
+ \begin{block}{Intent 传递数据}
 \begin{minted}[]{java}
 Intent intent = new Intent();
 intent.setClass(thisActivity,
@@ -331,14 +330,14 @@ startActivity(intent);
 \end{minted}
 \end{block}
 
-\begin{block}{Intent获取数据}
+\begin{block}{Intent 获取数据}
 \begin{minted}[]{java}
 Intent intent = getIntent();
 value = intent.getStringExtra(key);
 \end{minted}
 \end{block}
 \end{frame}
-\begin{frame}[fragile,label={sec:orgc8b4406}]{数据传递、共享（续）}
+\begin{frame}[fragile,label={sec:org736affb}]{数据传递、共享（续）}
  \begin{block}{startActivityForResult}
 \begin{minted}[]{java}
 Intent intent = new Intent(thisActivity,
@@ -360,31 +359,31 @@ protected void onActivityResult(
 \end{minted}
 \end{block}
 \end{frame}
-\begin{frame}[label={sec:org852b592}]{数据传递、共享（续）}
+\begin{frame}[label={sec:org9ac3205}]{数据传递、共享（续）}
 \begin{block}{Singleton、Application}
 \end{block}
-\begin{block}{数据存取也是一种IPC}
+\begin{block}{数据存取也是一种 IPC}
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org7b29113}]{小练习}
+\begin{frame}[label={sec:org3119791}]{小练习}
 \begin{itemize}
-\item 用Intent传递数据
-\item 用startActivityForResult获取结果
+\item 用 Intent 传递数据
+\item 用 startActivityForResult 获取结果
 \end{itemize}
 \end{frame}
 
-\item 总结
-\label{sec:org1fc3930}
-\begin{frame}[label={sec:org9596c90}]{查看文档的方法}
-\begin{block}{bhj-help-java 查看java API}
+\section{总结}
+\label{sec:orgff57843}
+\begin{frame}[label={sec:org751453e}]{查看文档的方法}
+\begin{block}{bhj-help-java 查看 java API}
 \end{block}
-\begin{block}{bhj-help-it 查看android:layout\(_{\text{toLeftOf}}\) android:layout\(_{\text{weight}}\)}
+\begin{block}{bhj-help-it 查看 android:layout\(_{\text{toLeftOf}}\) android:layout\(_{\text{weight}}\)}
 \end{block}
-\begin{block}{上beagrep暴力搜索}
+\begin{block}{上 beagrep 暴力搜索}
 \end{block}
 \end{frame}
-\begin{frame}[fragile,label={sec:orgb7c590a}]{下载整个Android源代码}
+\begin{frame}[fragile,label={sec:org1da964e}]{下载整个 Android 源代码}
  \begin{minted}[]{sh}
 repo_url=$(
     echo -n https://github.com/baohaojun
@@ -400,18 +399,17 @@ repo init -u $mani_url -b android-4.4_r1
 repo sync
 \end{minted}
 \end{frame}
-\begin{frame}[label={sec:orga75515f}]{ApiDemos}
+\begin{frame}[label={sec:org274a1a5}]{ApiDemos}
 \begin{figure}[htbp]
 \centering
 \includegraphics[width=.5\linewidth]{./images/opengl.ps}
-\caption{\label{fig:org9b0feae}
-OpenGL画图}
+\caption{\label{fig:orgc6e58d7}
+OpenGL 画图}
 \end{figure}
 \end{frame}
 
-\begin{frame}[label={sec:org86ab5b7}]{多读，多写！}
-\begin{block}{写出有趣的软件，发布到Google Play上}
+\begin{frame}[label={sec:org2d3c4b9}]{多读，多写！}
+\begin{block}{写出有趣的软件，发布到 Google Play 上}
 \end{block}
 \end{frame}
-\end{enumerate}
 \end{document}

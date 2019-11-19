@@ -2,7 +2,7 @@
 #+Latex: \CJKtilde
 
 
-#+TITLE:     Android网络和数据
+#+TITLE:     Android 网络和数据[嘿嘿]
 #+AUTHOR:    包昊军（钧钩）
 #+EMAIL:     baohaojun@gmail.com
 #+DATE:      2014-01-20
@@ -24,34 +24,34 @@
 
 ** 上节内容
 *** ListView & Adapter
-*** 实现banner和列表视图List的同时滑动
+*** 实现 banner 和列表视图 List 的同时滑动
 *** 删除列表中一行
 *** 双列列表
 
 ** 往期回顾
-*** Android系统和环境
-*** Activity等四大组件
+*** Android 系统和环境
+*** Activity 等四大组件
 *** ListView
 * 工具
-** 粗野的Beagrep
-*** Grep 9G Android代码，只需0.23秒
+** 粗野的 Beagrep
+*** Grep 9G Android 代码，只需 0.23 秒
 *** 阅读源代码的利器之一
-** 精细的grep-gtags
-*** 综合了ctags (exuberant）、gtags、cscope
-*** 可以与beagrep组合使用，获取函数调用位置
-*** 可以定位png文件，xml元素，这些也是源代码:-)
-** 搞笑的Ajoke
-*** 主要在使用grep-gtags和一些自制脚本
+** 精细的 grep-gtags
+*** 综合了 ctags (exuberant）、gtags、cscope
+*** 可以与 beagrep 组合使用，获取函数调用位置
+*** 可以定位 png 文件，xml 元素，这些也是源代码:-)
+** 搞笑的 Ajoke
+*** 主要在使用 grep-gtags 和一些自制脚本
 *** 可以打印继承树
 - 目前不可以打印倒继承树
 *** 可以补齐函数
-*** 可以自动import
+*** 可以自动 import
 *** 可以重载函数
-*** 将来会支持Exception
-** 可怕的skeleton-complete.el
+*** 将来会支持 Exception
+** 可怕的 skeleton-complete.el
 *** 打几个字符（骨架），补全整字、整句、整行、整段（血肉）
-*** 其实firefox也有类似的功能
-*** Java IDE神器 IntelliJ IDEA 也有类似的功能
+*** 其实 firefox 也有类似的功能
+*** Java IDE 神器 IntelliJ IDEA 也有类似的功能
 
 ** yasnippet
 *** 另一个非常强大的补齐展开工具
@@ -63,28 +63,28 @@
 - Tcp，Udp，Unix Domain
 - 我的输入法编程
 
-*** HTTP通讯
-- HttpURLConnection （Android原生，性能更好）
-- DefaultHttpClient （apache代码，早期bug较少）
+*** HTTP 通讯
+- HttpURLConnection （Android 原生，性能更好）
+- DefaultHttpClient （apache 代码，早期 bug 较少）
 
 *** WebView
 - 频繁变化，或轻交互
 
 
 ** 小练习
-*** 获取一段JSON数据 (MainActivity1)
-- AllIn4Demo代码位置
+*** 获取一段 JSON 数据 (MainActivity1)
+- AllIn4Demo 代码位置
   [[http://10.125.206.165/allin4.zip]]
 *** 会出错
     :PROPERTIES:
     :BEAMER_act: <2->
     :END:
-** UI主线程和联网线程
-*** Android编程中，需要牢记：
+** UI 主线程和联网线程
+*** Android 编程中，需要牢记：
 
-  + 要区分开UI主线程和工作线程
+  + 要区分开 UI 主线程和工作线程
 
-*** Android网络操作必须用工作线程                                               :B_block:BMCOL:
+*** Android 网络操作必须用工作线程                                               :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.4
     :BEAMER_env: block
@@ -99,24 +99,24 @@
     :PROPERTIES:
     :BEAMER_env: ignoreheading
     :END:
-*** 工作线程不允许操作UI元素                                                    :B_block:BMCOL:
+*** 工作线程不允许操作 UI 元素                                                    :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.4
     :BEAMER_env: block
     :END:
-*** 操作UI元素的API都是线程不安全的，只能在一个线程中调用以保证线程安全         :B_block:BMCOL:
+*** 操作 UI 元素的 API 都是线程不安全的，只能在一个线程中调用以保证线程安全         :B_block:BMCOL:
     :PROPERTIES:
     :BEAMER_col: 0.4
     :BEAMER_act: <3->
     :BEAMER_env: block
     :END:
 
-** 工作线程与UI主线程间通信
+** 工作线程与 UI 主线程间通信
 *** runOnUiThread
-- 工作线程中调用操作UI元素的Callback函数
+- 工作线程中调用操作 UI 元素的 Callback 函数
 *** Handler
-- 工作线程发送消息，UI线程处理消息
-- 当然UI线程也可以给自己发消息
+- 工作线程发送消息，UI 线程处理消息
+- 当然 UI 线程也可以给自己发消息
 
 *** AsyncTask
 - 更好的封装，有准备、运行（进度）、结果三个阶段
@@ -180,28 +180,28 @@ private class MyAsyncTask
 new MyAsyncTask().execute(...);
 #+END_SRC
 ** 小练习
-*** 用 runOnUiThread 实现线程间交互 (MainActivity2)
-*** 用 Handler 实现线程间交互 (MainActivity3)
-*** 用 AsyncTask 实现线程间交互 (MainActivity4)
+*** 用 runOnUiThread 实现线程间交互 (MainActivity2)
+*** 用 Handler 实现线程间交互 (MainActivity3)
+*** 用 AsyncTask 实现线程间交互 (MainActivity4)
 
-** WebView应用
+** WebView 应用
 
 *** 微博、微信客户端等的网页（网络应用）
-*** CrossDict的实现（离线网页应用）
+*** CrossDict 的实现（离线网页应用）
 
 * 数据
-** Android文件系统介绍
+** Android 文件系统介绍
 
-*** ADB的使用
-*** Android文件系统目录结构
-*** App目录结构
+*** ADB 的使用
+*** Android 文件系统目录结构
+*** App 目录结构
 
 ** 小练习
-- 用ADB安装Apk
-- 用ADB卸载Apk
-- 查看App的目录
+- 用 ADB 安装 Apk
+- 用 ADB 卸载 Apk
+- 查看 App 的目录
 
-** Android系统数据存取
+** Android 系统数据存取
 *** SharedPreferences
 #+BEGIN_SRC java
 SharedPreferences spf =
@@ -210,22 +210,22 @@ spf.getInt(String key, int defValue);
 spf.edit().putFloat(String key, float value).commit();
 #+END_SRC
 
-*** File：私有文件，sdcard上的文件，只读的asset资源文件
+*** File：私有文件，sdcard 上的文件，只读的 asset 资源文件
 #+BEGIN_SRC java
 openFileInput(path); openFileOutput(path);
 Environment.getExternalStoragePublicDirectory(path);
 AssetManager am = getAssets(); am.open(path);
 #+END_SRC
-*** Sqlite 单进程
-*** ContentProvider 多进程（联系人数据）
+*** Sqlite 单进程
+*** ContentProvider 多进程（联系人数据）
 ** 小练习
 
 *** SharedPreferences
-- 每进一次Activity，把记数加1，并显示
-- 查看 SharedPreferences 在文件系统中保存的位置
+- 每进一次 Activity，把记数加 1，并显示
+- 查看 SharedPreferences 在文件系统中保存的位置
 
 ** 数据传递、共享
-*** Intent传递数据
+*** Intent 传递数据
 #+BEGIN_SRC java
 Intent intent = new Intent();
 intent.setClass(thisActivity,
@@ -234,7 +234,7 @@ intent.putExtra(key, value);
 startActivity(intent);
 #+END_SRC
 
-*** Intent获取数据
+*** Intent 获取数据
 #+BEGIN_SRC java
 Intent intent = getIntent();
 value = intent.getStringExtra(key);
@@ -260,18 +260,18 @@ protected void onActivityResult(
 #+END_SRC
 ** 数据传递、共享（续）
 *** Singleton、Application
-*** 数据存取也是一种IPC
+*** 数据存取也是一种 IPC
 
 ** 小练习
-- 用Intent传递数据
-- 用startActivityForResult获取结果
+- 用 Intent 传递数据
+- 用 startActivityForResult 获取结果
 
 * 总结
 ** 查看文档的方法
-*** bhj-help-java 查看java API
-*** bhj-help-it 查看android:layout_toLeftOf android:layout_weight
-*** 上beagrep暴力搜索
-** 下载整个Android源代码
+*** bhj-help-java 查看 java API
+*** bhj-help-it 查看 android:layout_toLeftOf android:layout_weight
+*** 上 beagrep 暴力搜索
+** 下载整个 Android 源代码
 #+BEGIN_SRC sh
 repo_url=$(
     echo -n https://github.com/baohaojun
@@ -287,13 +287,13 @@ repo init -u $mani_url -b android-4.4_r1
 repo sync
 #+END_SRC
 ** ApiDemos
-   #+caption: OpenGL画图
+   #+caption: OpenGL 画图
    #+label: opengl-img
    #+ATTR_LATEX: :width .5\linewidth
    [[./images/opengl.ps]]
 
 ** 多读，多写！
-*** 写出有趣的软件，发布到Google Play上
+*** 写出有趣的软件，发布到 Google Play 上
 
 # Local Variables: #
 # eval: (org-beamer-mode) #

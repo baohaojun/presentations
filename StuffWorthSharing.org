@@ -36,6 +36,14 @@
        (* (取分母 有理数ａ) (取分母 有理数ｂ))))
   #+END_SRC
 
+** My Wishes that Came True @CHJ
+    #+BEAMER: \pause
+*** 密码管理工具（Password Manager）
+    #+BEAMER: \pause
+*** 全局快键缩写（Richard Stallman 的故事）
+    #+BEAMER: \pause
+*** Org-Kungfu（Logo：[嘿哈]）
+
 ** Get Things Done 工作方法
 
 #+BEAMER: \pause

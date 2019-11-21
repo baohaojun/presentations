@@ -42,6 +42,7 @@
     #+BEAMER: \pause
 *** 全局快键缩写（Richard Stallman 的故事）
     #+BEAMER: \pause
+[[~/Pictures/./涂鸦_Screenshot_2019-11-21-17-03-24-645_钉钉.png]]
 *** Org-Kungfu（Logo：[嘿哈]）
 
 ** Get Things Done 工作方法

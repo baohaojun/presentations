@@ -65,6 +65,8 @@
   #+ATTR_LaTeX: :width 3cm
   [[./org-mode.ps]]
 
+- 盗梦空间（fence-edit-mode）
+
 * Abstraction
 
 ** How to Design Programs
@@ -74,6 +76,7 @@
 #+BEAMER: \pause
 *** Similarity & Copying & Problems
 #+BEAMER: \pause
+- 有一个功能很好用，在别的地方，我也想要类似的功能（抽象 + wishing）
 *** Similarity & Learning & Oppotunities
 
 ** REPL（Read、Eval、Print、Loop）
@@ -158,5 +161,3 @@
 - The Fifth Discipline: The Art & Practice of the Learning Organization
 - Flow: The Psychology of Optimal Experience
 - SURELY YOU ARE JOKING, MR. FEYNMAN!
-
-

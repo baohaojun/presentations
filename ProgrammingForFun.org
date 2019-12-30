@@ -3,10 +3,10 @@
 #+STARTUP: beamer
 
 #+TITLE:     Programming for Fun
-#+SUBTITLE:  快乐编程
+#+SUBTITLE:  做一个快乐编程的文艺青年[二哈]
 #+AUTHOR:    Bao Haojun
 #+EMAIL:     baohaojun@gmail.com
-#+DATE:      2018-12-28
+#+DATE:      2019-12-31
 #+DESCRIPTION:
 #+KEYWORDS:
 #+LANGUAGE:  en
@@ -19,7 +19,8 @@
 
 ** SICP 介绍（Structure and Interpretation of Computer Programs）
 
-*** 一个小目标？
+#+BEAMER: \pause
+*** +一个小目标？先挣他一个亿？+
 
 #+BEAMER: \pause
 *** 怎么定义有理数及其各种运算？
@@ -60,16 +61,16 @@
   #+ATTR_LaTeX: :height 3cm
   [[./knuth.ps]]
 
+#+BEAMER: \pause
 - org-mode 演示（knuth-mode）
-
-  #+ATTR_LaTeX: :width 3cm
-  [[./org-mode.ps]]
-
+#+BEAMER: \pause
+- GTD/LP：不焦虑的秘密
+#+BEAMER: \pause
 - 盗梦空间（fence-edit-mode）
 
 * Abstraction
 
-** How to Design Programs
+** 一本书：How to Design Programs
 
 #+BEAMER: \pause
 *** Abstraction（抽） & Similarity（象）
@@ -77,6 +78,7 @@
 *** Similarity & Copying & Problems
 #+BEAMER: \pause
 - 有一个功能很好用，在别的地方，我也想要类似的功能（抽象 + wishing）
+#+BEAMER: \pause
 *** Similarity & Learning & Oppotunities
 
 ** REPL（Read、Eval、Print、Loop）
@@ -121,7 +123,7 @@
 - 截了肢的人还能觉得自己比以前还幸福？
 - “偏执于有用的细节，偏执于无用的细节，偏执于甚至不会被发现是有用还是无用的细节，这就是工匠精神”
 - “On Writing”一书作者的故事
-- Be Water My Friend
+- Be Water My Friend -- Bruce Lee.
 
 * 领导、决策与系统
 
@@ -135,9 +137,13 @@
 ** 关于决策系统的思考
 - 5 分钟就做一个决定？
 - 决定的影响有多深远？
-  * 推荐 The Fifth Discipline
+  * 推荐阅读：The Fifth Discipline
+- 做决策，最关键的是什么？
+  #+BEAMER: \pause
+  - 承担责任
 
-* 学习通过编程来学习
+
+* 学习，通过编程来学习
 
 ** 文档和源码                                                                   :B_fullframe:
    :PROPERTIES:
@@ -147,6 +153,17 @@
 *** man 手册中的搜索、Text::CSV 中的 imenu
 *** info 手册中的搜索
 *** 源码搜索：beagrep
+*** 抄书式学习（[[https://www.zhihu.com/question/28951394][章亦春]]） => 编辑式学习 => 快捷短语
+
+* 2019 年我的开源项目
+** 2019 年我的开源项目
+
+1. org-kungfu 和 jkd（用 emacs + cli 操作 altassian 软件）
+2. cuty（个人成长辅助集中注意力软件）
+3. 用 emacs 聊钉钉
+4. 简陋密码管理软件
+5. 快捷短语输入（Stallman 的故事）
+   - jira 文档 url 地址
 
 * 参考书目
 
@@ -161,3 +178,11 @@
 - The Fifth Discipline: The Art & Practice of the Learning Organization
 - Flow: The Psychology of Optimal Experience
 - SURELY YOU ARE JOKING, MR. FEYNMAN!
+* Q & A
+** Q & A
+
+*** Questions[疑问]
+#+BEAMER: \pause
+*** 祝大家新年快乐！
+#+BEAMER: \pause
+*** 记得许愿哦！

@@ -1,4 +1,4 @@
-% Created 2019-11-19 火 10:30
+% Created 2019-12-30 月 20:22
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation,dvipdfmx,CJKbookmarks]{beamer}
 \usepackage{CJKutf8}
@@ -23,9 +23,9 @@
 \usetheme{EastLansing}
 \usecolortheme{default}
 \author{Bao Haojun}
-\date{2018-12-28}
+\date{2019-12-31}
 \title{Programming for Fun}
-\subtitle{快乐编程}
+\subtitle{做一个快乐编程的文艺青年\text{\includegraphics[width=1em,valign=t,raise=0.1em,natwidth=48bp,natheight=48bp]{/home/bhj/src/github/Wrench/release/emojis/weibo-new/ErHa.png}}}
 \hypersetup{
  pdfauthor={Bao Haojun},
  pdftitle={Programming for Fun},
@@ -44,10 +44,11 @@
 \CJKtilde
 
 \section{Wishful Thinking（许愿式编程）}
-\label{sec:org419b511}
+\label{sec:orga978ccd}
 
-\begin{frame}[fragile,label={sec:orgae65a75}]{SICP\thinspace 介绍（Structure and Interpretation of Computer Programs）}
- \begin{block}{一个小目标？}
+\begin{frame}[fragile,label={sec:org2da35e9}]{SICP\thinspace 介绍（Structure and Interpretation of Computer Programs）}
+ \pause
+\begin{block}{\sout{一个小目标？先挣他一个亿？}}
 \pause
 \end{block}
 \begin{block}{怎么定义有理数及其各种运算？}
@@ -66,7 +67,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:org98fd167}]{Get Things Done\thinspace 工作方法}
+\begin{frame}[label={sec:orgc61e60b}]{Get Things Done\thinspace 工作方法}
 \pause
 \begin{itemize}[<+->]
 \item Coders at Work\thinspace 中对\thinspace jwz\thinspace 的采访
@@ -85,38 +86,49 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org50cbc1d}]{Literate Programming（文艺青年的编程方法）}
+\begin{frame}[label={sec:orgc153370}]{Literate Programming（文艺青年的编程方法）}
 \begin{itemize}[<+->]
 \item Knuth\thinspace 的工作方法
 
 \begin{center}
 \includegraphics[height=3cm]{./knuth.ps}
 \end{center}
+\end{itemize}
 
+\pause
+\begin{itemize}
 \item org-mode\thinspace 演示（knuth-mode）
-
-\begin{center}
-\includegraphics[width=3cm]{./org-mode.ps}
-\end{center}
+\end{itemize}
+\pause
+\begin{itemize}
+\item GTD/LP：不焦虑的秘密
+\end{itemize}
+\pause
+\begin{itemize}
+\item 盗梦空间（fence-edit-mode）
 \end{itemize}
 \end{frame}
 
 \section{Abstraction}
-\label{sec:org8a61224}
+\label{sec:orgf29cc07}
 
-\begin{frame}[label={sec:orgec8dd59}]{How to Design Programs}
+\begin{frame}[label={sec:org7a5e043}]{一本书：How to Design Programs}
 \pause
 \begin{block}{Abstraction（抽） \& Similarity（象）}
 \pause
 \end{block}
 \begin{block}{Similarity \& Copying \& Problems}
 \pause
+\begin{itemize}
+\item 有一个功能很好用，在别的地方，我也想要类似的功能（抽象 + wishing）
+\end{itemize}
+\pause
 \end{block}
 \begin{block}{Similarity \& Learning \& Oppotunities}
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:org1f90dd9}]{REPL（Read、Eval、Print、Loop）}
+\begin{frame}[fragile,label={sec:orgcffa470}]{REPL（Read、Eval、Print、Loop）}
  \begin{block}{Read}
 \end{block}
 \begin{block}{Eval}
@@ -139,9 +151,9 @@
 \end{frame}
 
 \section{Style}
-\label{sec:orgd477c98}
+\label{sec:orgaf8b985}
 
-\begin{frame}[fragile,label={sec:orge80ae37}]{编码风格（规范）与表达沟通}
+\begin{frame}[fragile,label={sec:orgcfe7bb1}]{编码风格（规范）与表达沟通}
  \begin{itemize}[<+->]
 \item 跳过所有语言、社区、公司的编码风格
 \item The Elements of Style（所有编程语言风格书致敬的对象）
@@ -159,9 +171,9 @@
 \end{frame}
 
 \section{Flow}
-\label{sec:org21fb09e}
+\label{sec:org268ed36}
 
-\begin{frame}[label={sec:org9f1a97c}]{}
+\begin{frame}[label={sec:org07770fa}]{}
 \begin{block}{Flow\thinspace 的模型}
 \begin{center}
 \includegraphics[width=4cm]{./images/flow.ps}
@@ -172,15 +184,15 @@
 \item 截了肢的人还能觉得自己比以前还幸福？
 \item “偏执于有用的细节，偏执于无用的细节，偏执于甚至不会被发现是有用还是无用的细节，这就是工匠精神”
 \item “On Writing”一书作者的故事
-\item Be Water My Friend
+\item Be Water My Friend -- Bruce Lee.
 \end{itemize}
 \end{block}
 \end{frame}
 
 \section{领导、决策与系统}
-\label{sec:orgcdb956a}
+\label{sec:org5849074}
 
-\begin{frame}[label={sec:orgc24dd00}]{原子弹研发的保密和安全}
+\begin{frame}[label={sec:org1474580}]{原子弹研发的保密和安全}
 \begin{itemize}
 \item 绝密任务，不能让纳粹知道消息
 \begin{itemize}
@@ -191,32 +203,55 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:org08129b0}]{关于决策系统的思考}
+\begin{frame}[label={sec:orge6a6eec}]{关于决策系统的思考}
 \begin{itemize}
 \item 5\thinspace 分钟就做一个决定？
 \item 决定的影响有多深远？
 \begin{itemize}
-\item 推荐\thinspace The Fifth Discipline
+\item 推荐阅读：The Fifth Discipline
+\end{itemize}
+\item 做决策，最关键的是什么？
+\pause
+\begin{itemize}
+\item 承担责任
 \end{itemize}
 \end{itemize}
 \end{frame}
 
-\section{学习通过编程来学习}
-\label{sec:org2831bf5}
 
-\begin{frame}[label={sec:org8de4647}]{}
+\section{学习，通过编程来学习}
+\label{sec:org8736c77}
+
+\begin{frame}[label={sec:org81a9aa7}]{}
 \begin{block}{man\thinspace 手册中的搜索、Text::CSV\thinspace 中的\thinspace imenu}
 \end{block}
 \begin{block}{info\thinspace 手册中的搜索}
 \end{block}
 \begin{block}{源码搜索：beagrep}
 \end{block}
+\begin{block}{抄书式学习（\href{https://www.zhihu.com/question/28951394}{章亦春}） => 编辑式学习 => 快捷短语}
+\end{block}
+\end{frame}
+
+\section{2019\thinspace 年我的开源项目}
+\label{sec:orgeb59848}
+\begin{frame}[label={sec:org0f37ae5}]{2019\thinspace 年我的开源项目}
+\begin{enumerate}
+\item org-kungfu\thinspace 和\thinspace jkd（用\thinspace emacs\thinspace + cli\thinspace 操作\thinspace altassian\thinspace 软件）
+\item cuty（个人成长辅助集中注意力软件）
+\item 用\thinspace emacs\thinspace 聊钉钉
+\item 简陋密码管理软件
+\item 快捷短语输入（Stallman\thinspace 的故事）
+\begin{itemize}
+\item jira\thinspace 文档\thinspace url\thinspace 地址
+\end{itemize}
+\end{enumerate}
 \end{frame}
 
 \section{参考书目}
-\label{sec:orgfd1ad7e}
+\label{sec:orga8c2dca}
 
-\begin{frame}[label={sec:orgf33f40e}]{}
+\begin{frame}[label={sec:org724efe4}]{}
 \begin{itemize}
 \item Coders at Work
 \item SICP
@@ -226,6 +261,18 @@
 \item Flow: The Psychology of Optimal Experience
 \item SURELY YOU ARE JOKING, MR. FEYNMAN!
 \end{itemize}
+\end{frame}
+\section{Q \& A}
+\label{sec:org6b51010}
+\begin{frame}[label={sec:org05ed7d7}]{Q \& A}
+\begin{block}{Questions\text{\includegraphics[width=1em,valign=t,raise=0.1em,natwidth=48bp,natheight=48bp]{/home/bhj/src/github/Wrench/release/emojis/qq-emojis/smiley_32.png}}}
+\pause
+\end{block}
+\begin{block}{祝大家新年快乐！}
+\pause
+\end{block}
+\begin{block}{记得许愿哦！}
+\end{block}
 \end{frame}
 \end{CJK*}
 \end{document}

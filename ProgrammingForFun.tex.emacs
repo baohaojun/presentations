@@ -1,6 +1,7 @@
-% Created 2019-12-30 月 20:22
+% Created 2019-12-31 火 10:20
 % Intended LaTeX compiler: pdflatex
 \documentclass[presentation,dvipdfmx,CJKbookmarks]{beamer}
+\usepackage{bxdpx-beamer}
 \usepackage{CJKutf8}
 \usepackage{atbegshi}
 \AtBeginShipoutFirst{\special{pdf:tounicode UTF8-UTF16}} % for UTF-8
@@ -43,9 +44,9 @@
 \CJKtilde
 
 \section{Wishful Thinking（许愿式编程）}
-\label{sec:orga978ccd}
+\label{sec:org8d32828}
 
-\begin{frame}[fragile,label={sec:org2da35e9}]{SICP 介绍（Structure and Interpretation of Computer Programs）}
+\begin{frame}[fragile,label={sec:org3a400b8}]{SICP 介绍（Structure and Interpretation of Computer Programs）}
  \pause
 \begin{block}{\sout{一个小目标？先挣他一个亿？}}
 \pause
@@ -66,7 +67,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[label={sec:orgc61e60b}]{Get Things Done 工作方法}
+\begin{frame}[label={sec:org5c278ab}]{Get Things Done 工作方法}
 \pause
 \begin{itemize}[<+->]
 \item Coders at Work 中对 jwz 的采访
@@ -85,33 +86,24 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orgc153370}]{Literate Programming（文艺青年的编程方法）}
+\begin{frame}[label={sec:org53ebbb7}]{Literate Programming（文艺青年的编程方法）}
 \begin{itemize}[<+->]
 \item Knuth 的工作方法
 
 \begin{center}
 \includegraphics[height=3cm]{./knuth.ps}
 \end{center}
-\end{itemize}
 
-\pause
-\begin{itemize}
 \item org-mode 演示（knuth-mode）
-\end{itemize}
-\pause
-\begin{itemize}
 \item GTD/LP：不焦虑的秘密
-\end{itemize}
-\pause
-\begin{itemize}
 \item 盗梦空间（fence-edit-mode）
 \end{itemize}
 \end{frame}
 
 \section{Abstraction}
-\label{sec:orgf29cc07}
+\label{sec:orgae3065e}
 
-\begin{frame}[label={sec:org7a5e043}]{一本书：How to Design Programs}
+\begin{frame}[label={sec:org464e192}]{一本书：How to Design Programs}
 \pause
 \begin{block}{Abstraction（抽） \& Similarity（象）}
 \pause
@@ -127,7 +119,7 @@
 \end{block}
 \end{frame}
 
-\begin{frame}[fragile,label={sec:orgcffa470}]{REPL（Read、Eval、Print、Loop）}
+\begin{frame}[fragile,label={sec:org484beeb}]{REPL（Read、Eval、Print、Loop）}
  \begin{block}{Read}
 \end{block}
 \begin{block}{Eval}
@@ -150,9 +142,9 @@
 \end{frame}
 
 \section{Style}
-\label{sec:orgaf8b985}
+\label{sec:org2a5638e}
 
-\begin{frame}[fragile,label={sec:orgcfe7bb1}]{编码风格（规范）与表达沟通}
+\begin{frame}[fragile,label={sec:orgfa73be3}]{编码风格（规范）与表达沟通}
  \begin{itemize}[<+->]
 \item 跳过所有语言、社区、公司的编码风格
 \item The Elements of Style（所有编程语言风格书致敬的对象）
@@ -170,9 +162,9 @@
 \end{frame}
 
 \section{Flow}
-\label{sec:org268ed36}
+\label{sec:org737b2dd}
 
-\begin{frame}[label={sec:org07770fa}]{}
+\begin{frame}[label={sec:orgb20f83e}]{}
 \begin{block}{Flow 的模型}
 \begin{center}
 \includegraphics[width=4cm]{./images/flow.ps}
@@ -189,9 +181,9 @@
 \end{frame}
 
 \section{领导、决策与系统}
-\label{sec:org5849074}
+\label{sec:orge382ef3}
 
-\begin{frame}[label={sec:org1474580}]{原子弹研发的保密和安全}
+\begin{frame}[label={sec:org0c3301d}]{原子弹研发的保密和安全}
 \begin{itemize}
 \item 绝密任务，不能让纳粹知道消息
 \begin{itemize}
@@ -202,7 +194,7 @@
 \end{itemize}
 \end{frame}
 
-\begin{frame}[label={sec:orge6a6eec}]{关于决策系统的思考}
+\begin{frame}[label={sec:orgd141101}]{关于决策系统的思考}
 \begin{itemize}
 \item 5 分钟就做一个决定？
 \item 决定的影响有多深远？
@@ -219,9 +211,9 @@
 
 
 \section{学习，通过编程来学习}
-\label{sec:org8736c77}
+\label{sec:orgad25478}
 
-\begin{frame}[label={sec:org81a9aa7}]{}
+\begin{frame}[label={sec:org1fb11b3}]{}
 \begin{block}{man 手册中的搜索、Text::CSV 中的 imenu}
 \end{block}
 \begin{block}{info 手册中的搜索}
@@ -233,8 +225,8 @@
 \end{frame}
 
 \section{2019 年我的开源项目}
-\label{sec:orgeb59848}
-\begin{frame}[label={sec:org0f37ae5}]{2019 年我的开源项目}
+\label{sec:org81fb648}
+\begin{frame}[label={sec:org3e7cafd}]{2019 年我的开源项目}
 \begin{enumerate}
 \item org-kungfu 和 jkd（用 emacs + cli 操作 altassian 软件）
 \item cuty（个人成长辅助集中注意力软件）
@@ -248,9 +240,9 @@
 \end{frame}
 
 \section{参考书目}
-\label{sec:orga8c2dca}
+\label{sec:org41530ce}
 
-\begin{frame}[label={sec:org724efe4}]{}
+\begin{frame}[label={sec:orga0932d9}]{}
 \begin{itemize}
 \item Coders at Work
 \item SICP
@@ -262,8 +254,8 @@
 \end{itemize}
 \end{frame}
 \section{Q \& A}
-\label{sec:org6b51010}
-\begin{frame}[label={sec:org05ed7d7}]{Q \& A}
+\label{sec:orgf14e376}
+\begin{frame}[label={sec:orge0a9c00}]{Q \& A}
 \begin{block}{Questions\text{\includegraphics[width=1em,valign=t,raise=0.1em]{/home/bhj/src/github/Wrench/release/emojis/qq-emojis/smiley_32.png}}}
 \pause
 \end{block}

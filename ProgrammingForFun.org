@@ -61,11 +61,8 @@
   #+ATTR_LaTeX: :height 3cm
   [[./knuth.ps]]
 
-#+BEAMER: \pause
 - org-mode 演示（knuth-mode）
-#+BEAMER: \pause
 - GTD/LP：不焦虑的秘密
-#+BEAMER: \pause
 - 盗梦空间（fence-edit-mode）
 
 * Abstraction
@@ -78,31 +75,34 @@
 *** Similarity & Copying & Problems
 #+BEAMER: \pause
 - 有一个功能很好用，在别的地方，我也想要类似的功能（抽象 + wishing）
+  - Demo：Firefox 地址选择，命令行选择，跳板机选择
 #+BEAMER: \pause
 *** Similarity & Learning & Oppotunities
+- 对比学习不同编程语言
 
 ** REPL（Read、Eval、Print、Loop）
 #+ATTR_BEAMER: :overlay <+->
-*** Read
-*** Eval
+*** 什么是 REPL
+- 所有交互式编程语言环境共有的一种模式
+- 理解 REPL，用 REPL 去套，有助于编程语言学习
+*** 关于 REPL 需注意的地方
 - 注意求值的次数限制（只能求一次）
-  * 有些值求一次和求 N 次都是一样的
+  * 有些值求一次和求 N 次都是一样的（atoms）
   * 除此之外，不能随意求多次（如果想求多于一次，必须明确指定——比如用 eval 函数）
-
-    ~x=y; y=z; echo $x~
-  * 左值和右值有没有分别？（Tcl 和 Perl 的对比）
-
-*** Print
-*** Loop
+    ~x=y; y=z; echo $x~ => y? z?
+- 经常会碰到需要多次求值的情况！（比如，xml + html + org-mode）
+- 不要随意进出『盗梦空间』😅
+- 有疑惑时，*严格* 按编程语言的游戏规则来
 
 * Style
 
 ** 编码风格（规范）与表达沟通
 #+ATTR_BEAMER: :overlay <+->
-- 跳过所有语言、社区、公司的编码风格
-- The Elements of Style（所有编程语言风格书致敬的对象）
+- 跳过所有语言、社区、公司的编码风格（太多了[跪了]）
+- The Elements of Style（很简单、所有编程语言风格书致敬的对象）
 - If you don't know how to pronounce a word, say it loud！Why compound ignorance with inaudibility？
   * -- E.B. White，The Elements of Style 的作者之一，著有“夏洛特的网”
+  * 不要尝试隐藏问题，要及早暴露问题，这样比较简单
   * 个人而言，直接决定了我最喜欢的编程语言特性，是 shell 的“set -e”
   * 或许我们应该学习 APUE 的作者的做法？他把每一个常用库函数，都自己封装了一下，比如 =close(fd) -> Close(fd)=，一旦发现错误返回值就退出
   # * 我在 AOSP 上进的一个 [[https://android.googlesource.com/platform/frameworks/av/+/5225ba0%255E%2521/#F1][patch]]，就是没有检查 close 的返回值导致没有及时发现问题
@@ -132,7 +132,7 @@
 - 绝密任务，不能让纳粹知道消息
   * 不告诉工人自己天天处理的是什么
 - 非常危险，万一超过“临界质量”的原料堆在一起，引发连锁反应。。。
-- 最后找一个上校报告，上校说，给我 5 分钟时间
+- 最后找一个上校拍板，上校说，给我 5 分钟时间
 
 ** 关于决策系统的思考
 - 5 分钟就做一个决定？
@@ -141,7 +141,6 @@
 - 做决策，最关键的是什么？
   #+BEAMER: \pause
   - 承担责任
-
 
 * 学习，通过编程来学习
 

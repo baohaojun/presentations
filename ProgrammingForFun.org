@@ -79,6 +79,7 @@
 #+BEAMER: \pause
 *** Similarity & Learning & Oppotunities
 - 对比学习不同编程语言
+- 重复的就是最像的（refactory）
 
 ** REPL（Read、Eval、Print、Loop）
 #+ATTR_BEAMER: :overlay <+->

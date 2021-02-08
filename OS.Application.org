@@ -1,0 +1,22 @@
+#+Latex_class: 中文演示
+#+Latex: \CJKtilde
+#+STARTUP: beamer
+
+#+TITLE:     包昊军加入 OS 项目研发申请
+#+SUBTITLE:
+#+AUTHOR:    Bao Haojun
+#+EMAIL:     baohaojun@gmail.com
+#+DATE:      2021-02-04
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:2
+
+#+BEAMER_THEME: EastLansing
+#+BEAMER_COLOR_THEME: default
+
+* OS 三大模块
+
+** seL4
+** Runtime
+** Classic Autosar

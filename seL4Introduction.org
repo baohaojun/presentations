@@ -1,0 +1,96 @@
+#+Latex_class: cn_beamer
+#+Latex: \CJKtilde
+#+STARTUP: beamer
+
+#+TITLE:     seL4 介绍
+#+SUBTITLE:  一个被形式化验证的安全微内核
+#+AUTHOR:    包昊军
+#+EMAIL:     baohaojun@lixiang.com
+#+DATE:      2021-02-14
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:2
+
+#+BEAMER_THEME: EastLansing
+#+BEAMER_COLOR_THEME: default
+
+* seL4 简介
+** 微内核
+
+[[./images/micro-kernel-structure.ps]]
+
+* seL4 项目
+** seL4 官方项目
+
+*** [[https://docs.sel4.systems/projects/buildsystem/host-dependencies.html][编译环境准备]]
+*** sel4-tutorials（入门教程）
+ - github :: https://github.com/seL4/sel4-tutorials
+ - 文档 :: https://docs.sel4.systems/Tutorials/
+*** sel4test（unit tests and more）
+ - github :: https://github.com/seL4/sel4test
+
+*** sel4-camkes（微内核嵌入式系统的组件化架构）
+
+ - 文档 :: https://docs.sel4.systems/projects/camkes/manual.html
+
+** seL4 社区项目
+
+*** genode on sel4
+- 一个开源的「操作系统框架」
+- sel4 移植的过程写了 3 篇文章
+  1. [[https://genode.org/documentation/articles/sel4_part_1][两个交替执行计算和打印的线程]]
+  2. [[https://genode.org/documentation/articles/sel4_part_2][IPC 和虚拟内存实验]]
+  3. [[https://genode.org/documentation/articles/sel4_part_3][移植核心组件]]
+*** [[https://github.com/PolySync/cargo-fel4][fel4]]
+
+- 直接在 sel4 上运行嵌入式 rust 程序
+- 项目已过时，需要修改源码之后才能运行
+*** [[https://gitlab.com/arm-research/security/icecap/icecap/][icecap]]
+- Arm Research 的 sel4 rust 项目
+
+** 项目中使用组件框架的建议
+
+*** seL4 API 易用性差（重点在于形式化验证）
+*** 所以需要使用组件框架，重点关注业务逻辑
+*** 两个主要的组件框架：camkes 和 genode
+- camkes 主要用于静态系统：组件预定义，启动之后不再变化
+- genode 更强大通用，但无法使用 sel4 全部安全特性
+
+* sel4 研究方向
+** [[https://ts.data61.csiro.au/students/theses.pml.html][研究项目]]
+- 多核、IPC 性能优化
+- Secure, Android-based OS for IoT
+- [[https://ts.data61.csiro.au/projects/TS/realtime.pml.html][seL4 AUTOSAR]]
+- Shared resources in an microkernel-based OS（用 camkes 实现文件系统、网络协议栈）
+- Linux as a component（camkes-vm）
+** [[https://github.com/seL4/docs/blob/master/SuggestedProjects.md][Github 项目建议]]
+- 移植 minix3 到 sel4
+
+
+* sel4 动态
+** sel4 动态
+- 2020 年 4 月，成立 seL4 基金会，由 Linux 基金会托管（[[https://microkerneldude.wordpress.com/2020/04/07/the-sel4-foundation-what-and-why/][sel4 原作者博客]]）
+- 2021 年 2 月，FOSDEM 2021
+** sel4 RFC
+
+[[./images/rfc-for-core.ps]]
+- Core、Core Platform
+
+** sel4 multi-server OS
+[[./images/multi-server.os.ps]]
+
+** sel4 multi-server OS
+
+[[./images/multi-server.os.2.ps]]
+* 参考链接
+** 参考链接
+- [[https://sel4.systems/About/seL4-whitepaper.pdf][白皮书]]
+  # - 微内核、VMM，非 OS
+  # - 被程序证明正确性、安全性等
+  # - 使用 capability-based security 检制（任何对象都是独立的 capability，只有拥有对应的 capability 的进程才能操作此对象）
+  # - 硬实时性支持
+  # - 安全的同时保证高性能
+  # - 真实布署故事（先使用 vmm，然后模块化增量移植）
+
+  # 中间提到一个点，封闭式的系统（系统中所有功能模块在开始的时候都很清晰），建议使用 camkes；开发性的系统开发，建议参考 [[https://genode.org/][genode]]。

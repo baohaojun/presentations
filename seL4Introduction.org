@@ -19,6 +19,11 @@
 ** 微内核
 
 [[./images/micro-kernel-structure.ps]]
+** 基于 capbilities 的安全性
+
+- Root task 启动时拥有系统所有 caps
+- 任何系统调用都会检查是否拥有对应的 caps
+  - 包括进程间通信
 
 * seL4 项目
 ** seL4 官方项目
@@ -53,9 +58,11 @@
 
 *** seL4 API 易用性差（重点在于形式化验证）
 *** 所以需要使用组件框架，重点关注业务逻辑
-*** 两个主要的组件框架：camkes 和 genode
+*** [[https://sel4.systems/About/seL4-whitepaper.pdf][两个主要的组件框架：camkes 和 genode]]
 - camkes 主要用于静态系统：组件预定义，启动之后不再变化
 - genode 更强大通用，但无法使用 sel4 全部安全特性
+*** [[https://docs.sel4.systems/projects/sel4/frequently-asked-questions.html][libsel4utils]]
+- 提供了一些有用的抽象，比如进程，但更偏底层
 
 * sel4 研究方向
 ** [[https://ts.data61.csiro.au/students/theses.pml.html][研究项目]]

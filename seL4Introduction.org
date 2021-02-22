@@ -20,6 +20,20 @@
 
 [[./images/micro-kernel-structure.ps]]
 
+** 基于 capbilities 的安全特性
+
+*** Posix 模型
+- syscall open file X
+
+  操作系统提供权限检查
+- client -> server open file X
+
+  client 对 X 是否有操作权限，操作系统无法强制
+
+*** Caps 模型
+
+针对所有资源的操作，均需提供 caps 证明拥有权限
+
 * seL4 项目
 ** seL4 官方项目
 

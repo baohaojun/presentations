@@ -15,8 +15,8 @@
 #+BEAMER_THEME: EastLansing
 #+BEAMER_COLOR_THEME: default
 
-* seL4 简介
-** 微内核
+* seL4 简介：安全高效硬实时的微内核操作系统
+** 微内核和安全
 
 [[./images/micro-kernel-structure.ps]]
 ** 基于 capbilities 的安全性

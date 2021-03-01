@@ -1,0 +1,71 @@
+* sel4 的构建系统
+
+** Root Server
+
+以 tutorial 里的 dyn-4 项目为例：
+
+#+begin_src cmake
+project(dynamic-4 C ASM)
+
+sel4_tutorials_setup_roottask_tutorial_environment()
+
+add_executable(client client.c)
+
+target_link_libraries(client
+    sel4
+    muslc utils sel4tutorials
+    sel4muslcsys sel4platsupport sel4utils sel4debug)
+...
+#+end_src
+
+上面的代码声明了一个可执行程序，它会被动态加载（所以这个 tut 的名字叫 dyn-4）。
+
+#+begin_src cmake
+include(cpio)
+MakeCPIO(archive.o "$<TARGET_FILE:client>")
+
+add_executable(dynamic-4 archive.o main.c)
+
+target_link_libraries(dynamic-4
+    sel4runtime sel4
+    muslc utils sel4tutorials
+    sel4muslcsys sel4platsupport sel4utils sel4debug sel4allocman)
+...
+#+end_src
+这段代码把 client 放到了一个 cpio archive.o 里，然后添加了 main 程序，并且把 archive.o 也链接了进去。
+
+注意这就是 sel4 的「动态加载」操作了，非常简单，毕竟是一个实时嵌入式系统。
+
+#+begin_src cmake
+
+include(rootserver)
+DeclareRootserver(dynamic-4)
+#+end_src
+
+声明了 sel4 的 root server，相当于 linux 下的 init 进程。
+
+* OS 项目中与其他源码系统的整合
+
+** minix 3 的构建系统
+
+参考：
+https://wiki.minix3.org/doku.php?id=developersguide:crosscompiling
+
+- X86 编译
+
+  =bash ./releasetools/x86_hdimage.sh=
+
+- [[https://wiki.minix3.org/doku.php?id=developersguide:minixonarm][Arm 编译]]
+
+  =./releasetools/arm_sdimage.sh=
+
+  编译完成之后，想运行的话，需要使用 linaro 提供的 qemu，里面包含了 beaglexm 的支持，这个得自己编译一下。
+
+  #+begin_src sh
+    ~/external/qemu/bin/qemu-system-arm \
+        -M beaglexm \
+        -serial stdio \
+        -drive if=sd,cache=writeback,file=/home/bhj/src/reading/minix/minix_arm_sd.img
+  #+end_src
+
+*** minix 3 的构建原理

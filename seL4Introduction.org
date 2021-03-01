@@ -3,10 +3,10 @@
 #+STARTUP: beamer
 
 #+TITLE:     seL4 介绍
-#+SUBTITLE:  一个被形式化验证的安全微内核
+#+SUBTITLE:  一个形式化验证的安全微内核
 #+AUTHOR:    包昊军
 #+EMAIL:     baohaojun@lixiang.com
-#+DATE:      2021-02-14
+#+DATE:      2021-02-25
 #+DESCRIPTION:
 #+KEYWORDS:
 #+LANGUAGE:  en
@@ -15,18 +15,18 @@
 #+BEAMER_THEME: EastLansing
 #+BEAMER_COLOR_THEME: default
 
-* seL4 简介：安全高效硬实时的微内核操作系统
-** 微内核和安全
+* seL4：安全高性能硬实时的微内核操作系统
+** 微内核
 
 [[./images/micro-kernel-structure.ps]]
+
+** 微内核与安全性
+
+#+caption: Genode 操作系统
+#+ATTR_LATEX: :width .6\linewidth
+[[./Genode_intro.ps]]
+
 ** 基于 capbilities 的安全性
-
-- Root task 启动时拥有系统所有 caps
-- 任何系统调用都会检查是否拥有对应的 caps
-  - 包括进程间通信
-
-** 基于 capbilities 的安全特性
-
 *** Posix 模型
 - syscall open file X
 
@@ -35,9 +35,43 @@
 
   client 对 X 是否有操作权限，操作系统无法强制
 
-*** Caps 模型
+** Caps 模型
+
+[[./images/caps-key.ps]]
 
 针对所有资源的操作，均需提供 caps 证明拥有权限
+  - 进程间通信
+  - 地址空间
+  - 中断处理
+  - 调度上下文
+
+** 高性能
+- 微内核性能差是一种偏见（Mach）
+- L4 系统微内核对 IPC 调用优化（Jochen Liedtke）
+  - 优化 IPC 调用开销
+  - 微内核减小内存使用，带来 cache hitrate 提升
+
+** 硬实时
+
+*** seL4 调度策略简单可靠，易分析证明
+*** 必须考虑中断时延
+
+    - 一般都是抢占式，即内核态不关中断，只在关键区域短暂关中断
+    - seL4 是非抢占式的，内核态会关中断
+    - 怎么解决中断时延变长的问题？
+
+** Mixed Criticality System
+  - 不同严重等级的多个系统整合在一起
+  - 节省空间、重量、能源
+  - seL4 实现原理：时间（调度算法）也引入 Capbility 管理
+    - ❌ 时间片 + 优先级（传统方法，会造成资源严重浪费）
+    - ✅ 时间片预算 + 优先级 + 预算周期
+      #+BEAMER: \pause
+      - 预算 = WCET
+      - 周期 = Deadline 周期
+      - 实时性：（预算 A/周期 A）+（预算 B/周期 B）+... < 100%
+      - MCS：A 的预算超了，无法完成，A 系统故障，不影响其他
+
 
 * seL4 项目
 ** seL4 官方项目
@@ -69,12 +103,12 @@
 - Arm Research 的 sel4 rust 项目
 
 ** 项目中使用组件框架的建议
-
 *** seL4 API 易用性差（重点在于形式化验证）
 *** 所以需要使用组件框架，重点关注业务逻辑
 *** [[https://sel4.systems/About/seL4-whitepaper.pdf][两个主要的组件框架：camkes 和 genode]]
 - camkes 主要用于静态系统：组件预定义，启动之后不再变化
 - genode 更强大通用，但无法使用 sel4 全部安全特性
+- 挑战：如何同时使用 genode 和 camkes
 *** [[https://docs.sel4.systems/projects/sel4/frequently-asked-questions.html][libsel4utils]]
 - 提供了一些有用的抽象，比如进程，但更偏底层
 
@@ -87,16 +121,19 @@
 - Linux as a component（camkes-vm）
 ** [[https://github.com/seL4/docs/blob/master/SuggestedProjects.md][Github 项目建议]]
 - 移植 minix3 到 sel4
-
+- 移植 Doom 到 sel4
 
 * sel4 动态
 ** sel4 动态
 - 2020 年 4 月，成立 seL4 基金会，由 Linux 基金会托管（[[https://microkerneldude.wordpress.com/2020/04/07/the-sel4-foundation-what-and-why/][sel4 原作者博客]]）
 - 2021 年 2 月，FOSDEM 2021
-** sel4 RFC
+** sel4 RFC（FOSDEM 2021）
 
 [[./images/rfc-for-core.ps]]
 - Core、Core Platform
+  - Core 整个 seL4 核心系统
+  - Core Platform 操作系统特性和开发平台
+    （比如 Posix 就是一种操作系统特性）
 
 ** sel4 multi-server OS
 [[./images/multi-server.os.ps]]
@@ -104,14 +141,35 @@
 ** sel4 multi-server OS
 
 [[./images/multi-server.os.2.ps]]
+
+* Qemu gdb 调试 Demo
+** 使用 Qemu、gdb 调试 sel4 内核与应用
+
+*** Gdb 调试方式启动 Qemu 仿真
+
+    #+begin_src sh
+      ./simulate  --gdb
+    #+end_src
+
+*** Gdb 调试 kernel
+    #+begin_src sh
+      ./launch_gdb -f kernel/kernel.elf
+      (gdb) b seL4_MessageInfo_new
+    #+end_src
+
+*** Gdb 调试 sel4 应用
+
+    #+begin_src sh
+      ./launch_gdb -f dynamic-4
+      (gdb) b main
+    #+end_src
+
 * 参考链接
 ** 参考链接
+- [[https://docs.sel4.systems/projects/sel4/api-doc.html][官网]]
 - [[https://sel4.systems/About/seL4-whitepaper.pdf][白皮书]]
-  # - 微内核、VMM，非 OS
-  # - 被程序证明正确性、安全性等
-  # - 使用 capability-based security 检制（任何对象都是独立的 capability，只有拥有对应的 capability 的进程才能操作此对象）
-  # - 硬实时性支持
-  # - 安全的同时保证高性能
-  # - 真实布署故事（先使用 vmm，然后模块化增量移植）
+- [[https://microkerneldude.wordpress.com/2020/04/07/the-sel4-foundation-what-and-why/][sel4 原作者博客]]
 
-  # 中间提到一个点，封闭式的系统（系统中所有功能模块在开始的时候都很清晰），建议使用 camkes；开发性的系统开发，建议参考 [[https://genode.org/][genode]]。
+** 谢谢聆听
+
+元宵节快乐＆周末愉快！

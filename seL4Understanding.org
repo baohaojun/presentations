@@ -1,0 +1,122 @@
+#+Latex_class: cn_beamer
+#+Latex: \CJKtilde
+#+STARTUP: beamer
+
+#+TITLE:     seL4 源码解析
+#+SUBTITLE:  学习笔记
+#+AUTHOR:    包昊军
+#+EMAIL:     baohaojun@lixiang.com
+#+DATE:      2021-02-25
+#+DESCRIPTION:
+#+KEYWORDS:
+#+LANGUAGE:  en
+#+OPTIONS:   H:2
+
+#+BEAMER_THEME: EastLansing
+#+BEAMER_COLOR_THEME: default
+
+* Capability
+** 什么是 Capability？（Wikipedia）
+
+1. 使用起来很像文件句柄，但是区别在于
+
+   - 一般需要提前分配，而非通过自己打开文件获取句柄
+   - 适用于系统中所有对象，而非仅限于文件
+
+2. 在用户态，Capability 只用一个整型表示（类似于一个内存地址，可以指向一个更复杂的对象的存储空间）
+
+3. 在内核态，Capability 被压缩到只用两个整型表示（非常关键并且常用的数据结构，必须考虑存储优化）
+
+** 内核态的 Capability 表示
+
+前面已经说了，在内核态，Capability 通过两个整型的存储表示，方法如下：
+
+1. 参考面向对象的方法，有一个「Capability 父类」，其满足所有子类的共同特性，参考如下伪代码：
+
+   #+begin_src c++
+     enum cap_tag {
+         cap_null,
+         cap_node,
+         cap_thread,
+         cap_frame,
+         //...
+     };
+
+     struct Capability {
+         enum cap_tag tag; // 用于 RTTI 的类型标签
+     };
+   #+end_src
+
+2. 但是，考虑到 struct 数据结构会依赖于具体的编译器，实际上在 seL4 里这个数据结构是通过 =.bf= 文件定义，并生过 python 文件自动解析生成 c 源码。
+
+   这里定义的是 cap 可以用两个整型表示（64 位系统，128 bits）：
+   #+begin_src bf
+     struct cap {
+         uint64_t words[2];
+     };
+     typedef struct cap cap_t;
+     ...
+     #+end_src
+
+     这里定义的是不同的「子类」的类型：
+     #+begin_src bf
+     enum cap_tag {
+         cap_null_cap = 0,
+         cap_untyped_cap = 2,
+         cap_endpoint_cap = 4,
+         cap_notification_cap = 6,
+         // ...
+     };
+   #+end_src
+
+   这里定义的是 frame cap（操作页帧的能力），最后一列的数字是 bit 数，你可以自己加一下，是否最后加起来是 128 bits。
+   #+begin_src bf
+     block frame_cap {
+         field       capFMappedASID      16
+         field_high  capFBasePtr         39
+         padding                         9
+
+         field       capType             5
+         field       capFSize            2
+         field       capFVMRights        2
+         field       capFIsDevice        1
+         padding                         15
+         field_high  capFMappedAddress   39
+     }
+   #+end_src
+
+3. 最后，会自动生成很多类似 C++面向对象的 method 定义：
+
+   - 这是一个构建函数：
+
+       #+begin_src c
+         static inline cap_t __attribute__((__const__))
+         cap_frame_cap_new(uint64_t capFMappedASID,
+                           uint64_t capFBasePtr,
+                           uint64_t capFSize,
+                           uint64_t capFMapType,
+                           uint64_t capFMappedAddress,
+                           uint64_t capFVMRights,
+                           uint64_t capFIsDevice) {
+             // ...
+         }
+
+       #+end_src
+
+   - 这是一个 getter，通过操作 bits 移位实现（注意因为是自动生成，所以其中有一些看上去多余的代码，比如 ~ret |= 0x0;~）：
+
+     #+begin_src c
+       static inline uint64_t CONST
+       cap_frame_cap_get_capFIsDevice(cap_t cap) {
+           uint64_t ret;
+           assert(((cap.words[0] >> 59) & 0x1f) ==
+                  cap_frame_cap);
+
+           ret = (cap.words[0] & 0x10ull) >> 4;
+           /* Possibly sign extend */
+           if (__builtin_expect(!!(0 && (ret & (1ull << (47)))), 0)) {
+               ret |= 0x0;
+           }
+           return ret;
+       }
+     #+end_src

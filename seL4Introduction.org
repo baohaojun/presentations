@@ -99,6 +99,71 @@
 
 - 直接在 sel4 上运行嵌入式 rust 程序
 - 项目已过时，需要修改源码之后才能运行
+
+    # #+begin_src diff
+    #   From 17f2c79482e7626de1d094ed9812e70f51d8e85e Mon Sep 17 00:00:00 2001
+    #   From: Bao Haojun <baohaojun@lixiang.com>
+    #   Date: Mon, 8 Mar 2021 15:28:48 +0800
+    #   Subject: [PATCH] Fix build error for fel4
+
+    #   Signed-off-by: Bao Haojun <baohaojun@lixiang.com>
+    #   ---
+    #    rust-toolchain   | 2 --
+    #    src/generator.rs | 6 +++---
+    #    2 files changed, 3 insertions(+), 5 deletions(-)
+    #    delete mode 100644 rust-toolchain
+
+    #   diff --git a/rust-toolchain b/rust-toolchain
+    #   deleted file mode 100644
+    #   index c1a4c6b..0000000
+    #   --- a/rust-toolchain
+    #   +++ /dev/null
+    #   @@ -1,2 +0,0 @@
+    #   -nightly
+    #   -
+    #   diff --git a/src/generator.rs b/src/generator.rs
+    #   index ed3b09c..0ee0318 100644
+    #   --- a/src/generator.rs
+    #   +++ b/src/generator.rs
+    #   @@ -42,6 +42,7 @@ impl<'a, 'b, 'c, W: Write> Generator<'a, 'b, 'c, W> {
+    #            self.writer.write_all(
+    #                b"
+    #    use core::intrinsics;
+    #   +use core::alloc::Layout;
+    #    use core::panic::PanicInfo;
+    #    use core::mem;
+    #    use sel4_sys::*;\n\n",
+    #   @@ -105,7 +106,6 @@ static mut CHILD_STACK: *const [u64; CHILD_STACK_SIZE] =
+    #    #![feature(lang_items, core_intrinsics)]
+    #    #![feature(global_asm)]
+    #    #![cfg_attr(feature = \"alloc\", feature(global_allocator))]
+    #   -#![feature(panic_implementation)]
+    #    #![feature(panic_info_message)]\n\n"
+    #            )?;
+
+    #   @@ -257,7 +257,7 @@ fn lang_start<T: Termination + 'static>(
+    #        panic!("Root task should never return from main!");
+    #    }
+
+    #   -#[panic_implementation]
+    #   +#[panic_handler]
+    #    #[no_mangle]
+    #    fn panic(info: &PanicInfo) -> ! {
+    #        #[cfg(feature = "KernelPrinting")]
+    #   @@ -309,7 +309,7 @@ pub fn eh_personality() {
+
+    #    #[lang = "oom"]
+    #    #[no_mangle]
+    #   -pub extern "C" fn oom() -> ! {
+    #   +pub extern "C" fn oom(_layout: Layout) -> ! {
+    #        #[cfg(feature = "KernelPrinting")]
+    #        {
+    #            use core::fmt::Write;
+    #   --
+    #   2.20.1
+
+
+    # #+end_src
 *** [[https://gitlab.com/arm-research/security/icecap/icecap/][icecap]]
 - Arm Research 的 sel4 rust 项目
 
